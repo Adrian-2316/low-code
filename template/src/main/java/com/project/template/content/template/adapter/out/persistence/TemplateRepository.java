@@ -29,6 +29,18 @@ public class TemplateRepository implements TemplateRepositoryPort {
         Optional<TemplateEntity> existingTemplate = templateJpaRepository.findById(id);
         if (existingTemplate.isPresent()) {
             TemplateEntity templateEntity = existingTemplate.get();
+            templateEntity.copyProperties(template);
+            return TemplateEntityMapper.INSTANCE.toDomainModel(templateJpaRepository.save(templateEntity));
+        }
+        return TemplateEntityMapper.INSTANCE.toDomainModel(templateJpaRepository.save(TemplateEntityMapper.INSTANCE.toEntity(template)));
+    }
+
+    @Override
+    public Template patchTemplate(Template template) {
+        Optional<TemplateEntity> existingTemplate = templateJpaRepository.findById(template.getId());
+        if (existingTemplate.isPresent()) {
+            TemplateEntity templateEntity = existingTemplate.get();
+            templateEntity.copyProperties(template);
             return TemplateEntityMapper.INSTANCE.toDomainModel(templateJpaRepository.save(templateEntity));
         }
         return TemplateEntityMapper.INSTANCE.toDomainModel(templateJpaRepository.save(TemplateEntityMapper.INSTANCE.toEntity(template)));

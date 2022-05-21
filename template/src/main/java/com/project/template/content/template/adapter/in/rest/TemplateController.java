@@ -8,6 +8,9 @@ import lombok.AllArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
 @AllArgsConstructor
 @RestController
 @Tag(name = "Template")
@@ -17,7 +20,7 @@ public class TemplateController {
 
     @GetMapping("/{id}")
     @Transactional(rollbackFor = Exception.class, readOnly = true)
-    public TemplateDto getTemplate(@PathVariable Long id) {
+    public TemplateDto getTemplate(@PathVariable @NotNull Long id) {
         return TemplateDtoMapper.INSTANCE.toDto(templatePort.getTemplate(id));
     }
 
@@ -29,12 +32,18 @@ public class TemplateController {
 
     @PutMapping("/{id}")
     @Transactional(rollbackFor = Exception.class)
-    public TemplateDto updateTemplate(@PathVariable Long id, @RequestBody TemplateDto templateDto) {
+    public TemplateDto updateTemplate(@PathVariable @NotNull Long id, @RequestBody @Valid TemplateDto templateDto) {
         return TemplateDtoMapper.INSTANCE.toDto(templatePort.updateTemplate(id, TemplateDtoMapper.INSTANCE.toCommand(templateDto)));
     }
 
+    @PatchMapping("/")
+    @Transactional(rollbackFor = Exception.class)
+    public TemplateDto patchTemplate(@RequestBody @Valid TemplateDto templateDto) {
+        return TemplateDtoMapper.INSTANCE.toDto(templatePort.patchTemplate(TemplateDtoMapper.INSTANCE.toCommand(templateDto)));
+    }
+
     @DeleteMapping("/{id}")
-    public void deleteTemplate(@PathVariable Long id) {
+    public void deleteTemplate(@PathVariable @NotNull Long id) {
         templatePort.deleteTemplate(id);
     }
 }

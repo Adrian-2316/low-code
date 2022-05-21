@@ -9,5 +9,7 @@ public interface TemplatePort {
 
     TemplateCommand updateTemplate(Long id, TemplateCommand templateCommand);
 
+    TemplateCommand patchTemplate(TemplateCommand templateCommand);
+
     void deleteTemplate(Long id);
 }

@@ -5,8 +5,12 @@ import com.project.lowcode.content.decipher.application.service.ports.in.Deciphe
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
+import java.io.IOException;
 
 @AllArgsConstructor
 @RestController
@@ -17,7 +21,7 @@ public class DecipherController {
     private DecipherPort decipherPort;
 
     @PostMapping("/decipher")
-    public void decipher(DecipherDto decipherDto) {
+    public void decipher(@RequestBody @Valid DecipherDto decipherDto) throws IOException {
         decipherPort.decipher(decipherDto);
     }
 

@@ -9,6 +9,8 @@ public interface TemplateRepositoryPort {
 
     Template updateTemplate(Long id, Template template);
 
+    Template patchTemplate(Template template);
+
     void deleteTemplate(Long id);
 }
 

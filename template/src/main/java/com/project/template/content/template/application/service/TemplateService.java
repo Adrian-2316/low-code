@@ -27,6 +27,11 @@ public class TemplateService implements TemplatePort {
     }
 
     @Override
+    public TemplateCommand patchTemplate(TemplateCommand templateCommand) {
+        return TemplateMapper.INSTANCE.toCommand(templateRepositoryPort.patchTemplate(TemplateMapper.INSTANCE.toDomainModel(templateCommand)));
+    }
+
+    @Override
     public void deleteTemplate(Long id) {
         templateRepositoryPort.deleteTemplate(id);
     }

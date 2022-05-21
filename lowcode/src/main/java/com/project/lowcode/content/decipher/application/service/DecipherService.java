@@ -15,7 +15,7 @@ public class DecipherService implements DecipherPort {
     @Override
     public void decipher(DecipherDto decipherDto) throws IOException {
         ModuleUtil.cloneModule(decipherDto.getBackend().getName());
+        ModuleUtil.replaceFolders(decipherDto.getBackend().getName());
         ModuleUtil.replaceFiles(decipherDto.getBackend().getName());
-
     }
 }

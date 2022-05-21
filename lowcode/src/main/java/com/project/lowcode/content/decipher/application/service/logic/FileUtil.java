@@ -32,4 +32,9 @@ public class FileUtil {
             }
         }
     }
+
+    public static void renameFolder(File file, File newFile) {
+        if (file.exists())
+            file.renameTo(newFile);
+    }
 }

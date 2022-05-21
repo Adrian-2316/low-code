@@ -1,7 +1,7 @@
-package com.project.lowcode.content.json.application.ports.out;
+package com.project.lowcode.content.json.application.service.ports.out;
 
-import com.project.lowcode.content.json.application.ports.in.commands.FieldCommand;
-import com.project.lowcode.content.json.application.ports.in.commands.JsonCommand;
+import com.project.lowcode.content.json.application.service.commands.FieldCommand;
+import com.project.lowcode.content.json.application.service.commands.JsonCommand;
 import com.project.lowcode.content.json.domain.models.Field;
 import com.project.lowcode.content.json.domain.models.Json;
 import org.mapstruct.Mapper;

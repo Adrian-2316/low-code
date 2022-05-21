@@ -1,9 +1,9 @@
 package com.project.lowcode.content.json.application.service;
 
-import com.project.lowcode.content.json.application.ports.in.JsonPort;
-import com.project.lowcode.content.json.application.ports.in.commands.JsonCommand;
-import com.project.lowcode.content.json.application.ports.out.JsonMapper;
-import com.project.lowcode.content.json.application.ports.out.JsonRepositoryPort;
+import com.project.lowcode.content.json.application.service.commands.JsonCommand;
+import com.project.lowcode.content.json.application.service.ports.in.JsonPort;
+import com.project.lowcode.content.json.application.service.ports.out.JsonMapper;
+import com.project.lowcode.content.json.application.service.ports.out.JsonRepositoryPort;
 import com.project.lowcode.content.json.domain.models.Json;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.project.lowcode.content.json.application.ports.in.commands;
+package com.project.lowcode.content.json.application.service.commands;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,11 +1,15 @@
 package com.project.lowcode.content.json.domain.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Builder
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Field {
     private String name;
     private String type;
@@ -19,21 +23,4 @@ public class Field {
     private Boolean primaryKey;
     private Boolean foreignKey;
 
-    public Field(String name, String type, String length, String precision, String scale, String nullable, String defaultValue, Boolean unique, Boolean autoIncrement, Boolean primaryKey, Boolean foreignKey) {
-        this.name = name;
-        this.type = type;
-        this.length = length;
-        this.precision = precision;
-        this.scale = scale;
-        this.nullable = nullable;
-        this.defaultValue = defaultValue;
-        this.unique = unique;
-        this.autoIncrement = autoIncrement;
-        this.primaryKey = primaryKey;
-        this.foreignKey = foreignKey;
-
-    }
-
-    public Field() {
-    }
 }

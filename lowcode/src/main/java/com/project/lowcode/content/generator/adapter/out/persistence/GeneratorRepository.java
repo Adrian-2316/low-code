@@ -7,7 +7,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.List;
 
 @Repository
 public class GeneratorRepository implements GeneratorRepositoryPort {
@@ -24,11 +23,6 @@ public class GeneratorRepository implements GeneratorRepositoryPort {
         Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/" + company, "postgres", "admin");
         Statement stmt = connection.createStatement();
         stmt.executeUpdate("CREATE SCHEMA IF NOT EXISTS " + app);
-    }
-
-    @Override
-    public void generateTabs(List<String> tabs) {
-
     }
 
 }

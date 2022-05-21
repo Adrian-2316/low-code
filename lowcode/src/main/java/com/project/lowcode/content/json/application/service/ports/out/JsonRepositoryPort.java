@@ -1,4 +1,4 @@
-package com.project.lowcode.content.json.application.ports.out;
+package com.project.lowcode.content.json.application.service.ports.out;
 
 import com.project.lowcode.content.json.domain.models.Json;
 

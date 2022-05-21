@@ -2,11 +2,12 @@ package com.project.lowcode.content.generator.application.service;
 
 import com.project.lowcode.content.generator.application.ports.in.GeneratorPort;
 import com.project.lowcode.content.generator.application.ports.out.GeneratorRepositoryPort;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
-import java.util.List;
 
+@AllArgsConstructor
 @Service
 public class GeneratorService implements GeneratorPort {
 
@@ -20,11 +21,6 @@ public class GeneratorService implements GeneratorPort {
     @Override
     public void generateSchema(String company, String app) throws SQLException {
         generatorRepositoryPort.generateSchema(company, app);
-    }
-
-    @Override
-    public void generateTabs(List<String> tabs) {
-        generatorRepositoryPort.generateTabs(tabs);
     }
 
 

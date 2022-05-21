@@ -2,8 +2,8 @@ package com.project.lowcode.content.json.adapter.in.rest;
 
 import com.project.lowcode.content.json.adapter.in.rest.dtos.JsonDto;
 import com.project.lowcode.content.json.adapter.in.rest.dtos.JsonDtoMapper;
-import com.project.lowcode.content.json.application.ports.in.JsonPort;
-import com.project.lowcode.content.json.application.ports.in.commands.JsonCommand;
+import com.project.lowcode.content.json.application.service.commands.JsonCommand;
+import com.project.lowcode.content.json.application.service.ports.in.JsonPort;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;

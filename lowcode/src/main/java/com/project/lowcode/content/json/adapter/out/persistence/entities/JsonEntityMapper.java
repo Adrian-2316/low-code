@@ -1,7 +1,5 @@
-package com.project.lowcode.content.json.adapter.out.persistence;
+package com.project.lowcode.content.json.adapter.out.persistence.entities;
 
-import com.project.lowcode.content.json.adapter.out.persistence.entities.FieldEntity;
-import com.project.lowcode.content.json.adapter.out.persistence.entities.JsonEntity;
 import com.project.lowcode.content.json.domain.models.Field;
 import com.project.lowcode.content.json.domain.models.Json;
 import org.mapstruct.Mapper;

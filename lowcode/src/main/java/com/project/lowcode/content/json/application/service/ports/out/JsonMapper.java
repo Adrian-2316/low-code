@@ -1,8 +1,6 @@
 package com.project.lowcode.content.json.application.service.ports.out;
 
-import com.project.lowcode.content.json.application.service.commands.FieldCommand;
 import com.project.lowcode.content.json.application.service.commands.JsonCommand;
-import com.project.lowcode.content.json.domain.models.Field;
 import com.project.lowcode.content.json.domain.models.Json;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
@@ -13,8 +11,5 @@ public interface JsonMapper {
 
     Json toDomainModel(JsonCommand jsonCommand);
 
-
-    Field[] toEntities(FieldCommand[] fieldCommand);
-
-    Field[] toDomainModels(JsonCommand[] jsonCommand);
+    JsonCommand toCommand(Json json);
 }

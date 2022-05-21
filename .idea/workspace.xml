@@ -4,27 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="478564a0-803e-4b6a-9b11-531fb9401739" name="Changes" comment="Lowcode first push.">
+    <list default="true" id="478564a0-803e-4b6a-9b11-531fb9401739" name="Changes" comment="Lowcode second push.">
+      <change afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/BackendDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/EntityDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/FrontendDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/generator/adapter/in/rest/GeneratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/generator/adapter/in/rest/GeneratorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/generator/adapter/out/persistence/GeneratorEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/generator/adapter/out/persistence/GeneratorJpaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/generator/adapter/out/persistence/GeneratorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/generator/adapter/out/persistence/GeneratorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/generator/application/ports/in/GeneratorPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/generator/application/ports/in/GeneratorPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/generator/application/ports/out/GeneratorRepositoryPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/generator/application/ports/out/GeneratorRepositoryPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/generator/application/service/GeneratorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/generator/application/service/GeneratorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/generator/domain/models/Generator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/adapter/in/rest/JsonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/adapter/in/rest/JsonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/adapter/in/rest/dtos/JsonDtoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/adapter/in/rest/dtos/JsonDtoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/adapter/out/persistence/JsonEntityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/adapter/out/persistence/entities/JsonEntityMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/adapter/out/persistence/JsonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/adapter/out/persistence/JsonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/application/ports/in/JsonPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/application/service/ports/in/JsonPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/application/ports/in/commands/FieldCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/application/service/commands/FieldCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/application/ports/in/commands/JsonCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/application/service/commands/JsonCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/application/ports/out/JsonMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/application/service/ports/out/JsonMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/application/ports/out/JsonRepositoryPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/application/service/ports/out/JsonRepositoryPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/application/service/JsonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/application/service/JsonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/domain/models/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/domain/models/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/application/service/ports/out/JsonMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/application/service/ports/out/JsonMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/resources/structure.json" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/resources/structure.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +67,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/adri9/IdeaProjects/lowcode-project",
+    "last_opened_file_path": "C:/Users/adri9/IdeaProjects/lowcode-project/lowcode/src/main/java/com/project/lowcode/content/decipher",
     "rearrange.code.on.save": "true",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
@@ -91,6 +77,7 @@
       <recent name="com.project.lowcode.content.generator.adapter.in.rest" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adri9\IdeaProjects\lowcode-project\lowcode\src\main\java\com\project\lowcode\content\decipher" />
       <recent name="C:\Users\adri9\IdeaProjects\lowcode-project\template\src\main\java\com\project\template\swagger" />
       <recent name="C:\Users\adri9\IdeaProjects\lowcode\src\main\java\com\project\lowcode\content\template" />
       <recent name="C:\Users\adri9\IdeaProjects\lowcode\src\main\java\com\project\lowcode\content\generator\adapter\in\rest\json" />
@@ -105,6 +92,7 @@
       <recent name="com.project.template.content.template.application.ports" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.project.lowcode.content.decipher.adapter.in.rest.dtos" />
       <recent name="com.project.lowcode.content.json.application.ports.out" />
       <recent name="com.project.lowcode.config" />
       <recent name="com.project.lowcode.content.json.application.service" />
@@ -112,6 +100,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.LowCode">
+    <configuration name="Decipher" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.project.lowcode.LowcodeApplication" />
+      <module name="lowcode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LowCode" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.project.lowcode.LowcodeApplication" />
       <module name="lowcode" />
@@ -129,6 +124,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.LowCode" />
+      <item itemvalue="Application.Decipher" />
       <item itemvalue="Application.Template" />
     </list>
   </component>
@@ -183,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653140627052</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Lowcode second push.">
+      <created>1653141933191</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653141933191</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,7 +208,8 @@
     <MESSAGE value="Json completed" />
     <MESSAGE value="Lowcode" />
     <MESSAGE value="Lowcode first push." />
-    <option name="LAST_COMMIT_MESSAGE" value="Lowcode first push." />
+    <MESSAGE value="Lowcode second push." />
+    <option name="LAST_COMMIT_MESSAGE" value="Lowcode second push." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -234,6 +238,11 @@
           <url>file://$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/out/persistence/TemplateRepository.java</url>
           <line>28</line>
           <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/json/adapter/out/persistence/JsonRepository.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/application/service/ports/out/TemplateRepositoryPort.java</url>

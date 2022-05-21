@@ -1,0 +1,14 @@
+{
+  "backend": {
+    "type": "entity",
+    "fields": [
+      {
+        "name": "name",
+        "type": "type",
+        "notnull": "notnull"
+      }
+    ]
+  },
+  "frontend": {
+  }
+}

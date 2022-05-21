@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import javax.validation.ValidationException;
 import java.io.IOException;
 
 @AllArgsConstructor
@@ -21,8 +22,11 @@ public class DecipherController {
     private DecipherPort decipherPort;
 
     @PostMapping("/decipher")
-    public void decipher(@RequestBody @Valid DecipherDto decipherDto) throws IOException {
+    public void decipher(@RequestBody @Valid DecipherDto decipherDto) throws IOException, ValidationException {
+        // Third level inheritance javax.validation.ValidationException
+        if (decipherDto.getBackend().getName() == null) throw new ValidationException("Backend name is required.");
         decipherPort.decipher(decipherDto);
+
     }
 
 }

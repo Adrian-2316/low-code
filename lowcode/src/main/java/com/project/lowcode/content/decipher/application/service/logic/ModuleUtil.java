@@ -4,6 +4,8 @@ import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModuleUtil {
 
@@ -16,4 +18,13 @@ public class ModuleUtil {
         File destinationDirectory = new File(destinationDirectoryLocation);
         FileUtils.copyDirectory(sourceDirectory, destinationDirectory);
     }
+
+    public static void replaceFiles(String name) {
+        String currentDirectoryLocation = "../" + name;
+        List<String> fileList = new ArrayList<>();
+        fileList.add("/pom.xml");
+
+        fileList.stream().map(file -> new File(currentDirectoryLocation + file)).forEach(fileToBeModified -> FileUtil.replaceText(name, fileToBeModified));
+    }
+
 }

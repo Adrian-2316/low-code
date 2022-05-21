@@ -5,6 +5,7 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,7 +18,9 @@ public class ModuleUtil {
 
         File sourceDirectory = new File(sourceDirectoryLocation);
         File destinationDirectory = new File(destinationDirectoryLocation);
-        FileUtils.copyDirectory(sourceDirectory, destinationDirectory);
+        if (sourceDirectory.exists() && !destinationDirectory.exists()) {
+            FileUtils.copyDirectory(sourceDirectory, destinationDirectory);
+        }
     }
 
     public static void replaceFiles(String name) {
@@ -42,10 +45,9 @@ public class ModuleUtil {
     public static void replaceFolders(String name) {
         name = name.substring(0, 1).toLowerCase() + name.substring(1);
         String upperCamelCaseName = name.substring(0, 1).toUpperCase() + name.substring(1);
-        Map<String, String> folderMap = Map.of(
-                "../" + name + "/src/main/java/com/project/template/TemplateApplication.java", "../" + name + "/src/main/java/com/project/template/" + upperCamelCaseName + "Application.java",
-                "../" + name + "/src/main/java/com/project/template", "../" + name + "/src/main/java/com/project/" + name
-        );
+        LinkedHashMap<String, String> folderMap = new LinkedHashMap<>();
+        folderMap.put("../" + name + "/src/main/java/com/project/template", "../" + name + "/src/main/java/com/project/" + name);
+        folderMap.put("../" + name + "/src/main/java/com/project/" + name + "/TemplateApplication.java", "../" + name + "/src/main/java/com/project/" + name + "/" + upperCamelCaseName + "Application.java");
         for (Map.Entry<String, String> entry : folderMap.entrySet()) {
             File folderToBeModified = new File(entry.getKey());
             FileUtil.renameFolder(folderToBeModified, new File(entry.getValue()));

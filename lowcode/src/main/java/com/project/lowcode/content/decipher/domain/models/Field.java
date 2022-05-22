@@ -1,4 +1,4 @@
-package com.project.lowcode.content.json.adapter.in.rest.dtos;
+package com.project.lowcode.content.decipher.domain.models;
 
 import com.project.lowcode.shared.Type;
 import lombok.AllArgsConstructor;
@@ -6,15 +6,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class FieldDto {
+@NoArgsConstructor
+public class Field {
     private String name;
     private String precision;
     private String scale;
     private String defaultValue;
     private Integer length;
-    private Boolean nullable = false;
+    private Boolean nullable;
     private Boolean unique;
     private Boolean autoIncrement;
     private Boolean primaryKey;

@@ -1,9 +1,6 @@
 package com.project.lowcode.content.decipher.adapter.in.rest.dtos;
 
-import com.project.lowcode.content.decipher.domain.models.Backend;
-import com.project.lowcode.content.decipher.domain.models.Decipher;
-import com.project.lowcode.content.decipher.domain.models.Entity;
-import com.project.lowcode.content.decipher.domain.models.Frontend;
+import com.project.lowcode.content.decipher.domain.models.*;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -21,8 +18,9 @@ public interface DecipherDtoMapper {
 
     EntityDto toDto(Entity entity);
 
-    List<EntityDto> toDtos(List<Entity> entity);
+    FieldDto toDto(Field field);
 
+    List<FieldDto> toDtos(List<Field> fields);
 
     Decipher toDomainModel(DecipherDto decipherDto);
 
@@ -32,5 +30,7 @@ public interface DecipherDtoMapper {
 
     Entity toDomainModel(EntityDto entityDto);
 
-    List<Entity> toDomainModels(List<EntityDto> entityDtos);
+    Field toDomainModel(FieldDto entityDto);
+
+    List<Field> toDomainModels(List<FieldDto> entityDtos);
 }

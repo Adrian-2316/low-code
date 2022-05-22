@@ -2,6 +2,7 @@ package com.project.lowcode.content.decipher.adapter.in.rest;
 
 import com.project.lowcode.content.decipher.adapter.in.rest.dtos.DecipherDto;
 import com.project.lowcode.content.decipher.adapter.in.rest.dtos.DecipherDtoMapper;
+import com.project.lowcode.content.decipher.adapter.in.rest.dtos.EntityDto;
 import com.project.lowcode.content.decipher.application.service.ports.in.DecipherPort;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
@@ -35,6 +36,11 @@ public class DecipherController {
         decipherDto.getBackend().getEntity().stream().filter(entityDto -> entityDto.getName() == null).forEach(entityDto -> {
             throw new ValidationException("Entity name is required.");
         });
+        for (EntityDto entityDto : decipherDto.getBackend().getEntity()) {
+            entityDto.getFields().stream().filter(fieldDto -> fieldDto.getName() == null).filter(fieldDto -> fieldDto.getType() == null).forEach(fieldDto -> {
+                throw new ValidationException("Field name and type are required.");
+            });
+        }
     }
 
 }

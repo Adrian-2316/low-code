@@ -1,4 +1,4 @@
-package com.project.lowcode.content.json.adapter.in.rest.dtos;
+package com.project.lowcode.content.decipher.adapter.in.rest.dtos;
 
 import com.project.lowcode.shared.Type;
 import lombok.AllArgsConstructor;
@@ -6,8 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class FieldDto {
     private String name;
     private String precision;

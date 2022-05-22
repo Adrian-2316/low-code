@@ -23,7 +23,7 @@ public class ModuleUtil {
         }
     }
 
-    public static void replaceFiles(String name) {
+    public static void replaceFiles(String name) throws IOException {
         String currentDirectoryLocation = "../" + name;
         List<String> fileList = new ArrayList<>();
         fileList.add("/pom.xml");

@@ -13,17 +13,29 @@ import java.io.IOException;
 @AllArgsConstructor
 @Service
 public class DecipherService implements DecipherPort {
-    
+
     @Override
     public void decipher(Decipher decipher) throws IOException, InterruptedException {
-        ModuleUtil.cloneModule(decipher.getBackend().getName());
-        ModuleUtil.replaceFolders(decipher.getBackend().getName());
-        ModuleUtil.replaceFiles(decipher.getBackend().getName());
+        buildModule(decipher);
+        buildEntities(decipher);
+        buildFields(decipher);
+    }
+
+    private void buildFields(Decipher decipher) throws IOException {
+        EntityUtil.addConstructorFields(decipher);
+    }
+
+    private void buildEntities(Decipher decipher) throws IOException {
         for (Entity entity : decipher.getBackend().getEntity()) {
             EntityUtil.cloneModule(decipher.getBackend().getName(), entity.getName());
             EntityUtil.replaceFolders(decipher.getBackend().getName(), entity.getName());
             EntityUtil.replaceFiles(decipher.getBackend().getName(), entity.getName());
         }
+    }
 
+    private void buildModule(Decipher decipher) throws IOException {
+        ModuleUtil.cloneModule(decipher.getBackend().getName());
+        ModuleUtil.replaceFolders(decipher.getBackend().getName());
+        ModuleUtil.replaceFiles(decipher.getBackend().getName());
     }
 }

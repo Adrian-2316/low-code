@@ -7,20 +7,18 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.BeanUtils;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "template", schema = "template")
+@Table(name = "mstr_template", schema = "template")
 public class TemplateEntity {
     @Id
     @GeneratedValue
+    @Column(name = "id")
     private Long id;
 
     public void copyProperties(Template template) {

@@ -1,5 +1,6 @@
 package com.project.lowcode.content.decipher.application.service.logic;
 
+import com.project.lowcode.shared.StringUtils;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -14,8 +15,7 @@ public class ModuleUtil {
     public static void cloneModule(String name)
             throws IOException {
         String sourceDirectoryLocation = "../template";
-        String destinationDirectoryLocation = "../" + name.substring(0, 1).toLowerCase() + name.substring(1);
-
+        String destinationDirectoryLocation = "../" + StringUtils.toLowerCamelCase(name);
         File sourceDirectory = new File(sourceDirectoryLocation);
         File destinationDirectory = new File(destinationDirectoryLocation);
         if (sourceDirectory.exists() && !destinationDirectory.exists()) {
@@ -43,8 +43,8 @@ public class ModuleUtil {
      * @param name the name of the module
      */
     public static void replaceFolders(String name) {
-        name = name.substring(0, 1).toLowerCase() + name.substring(1);
-        String upperCamelCaseName = name.substring(0, 1).toUpperCase() + name.substring(1);
+        name = StringUtils.toLowerCamelCase(name);
+        String upperCamelCaseName = StringUtils.toUpperCamelCase(name);
         LinkedHashMap<String, String> folderMap = new LinkedHashMap<>();
         folderMap.put("../" + name + "/src/main/java/com/project/template", "../" + name + "/src/main/java/com/project/" + name);
         folderMap.put("../" + name + "/src/main/java/com/project/" + name + "/TemplateApplication.java", "../" + name + "/src/main/java/com/project/" + name + "/" + upperCamelCaseName + "Application.java");

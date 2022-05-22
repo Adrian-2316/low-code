@@ -1,8 +1,10 @@
 package com.project.lowcode.content.decipher.application.service;
 
-import com.project.lowcode.content.decipher.adapter.in.rest.dtos.DecipherDto;
+import com.project.lowcode.content.decipher.application.service.logic.EntityUtil;
 import com.project.lowcode.content.decipher.application.service.logic.ModuleUtil;
 import com.project.lowcode.content.decipher.application.service.ports.in.DecipherPort;
+import com.project.lowcode.content.decipher.domain.models.Decipher;
+import com.project.lowcode.content.decipher.domain.models.Entity;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,12 +13,17 @@ import java.io.IOException;
 @AllArgsConstructor
 @Service
 public class DecipherService implements DecipherPort {
-
-    //TODO: Separate RabbitMQ queues for each process.
+    
     @Override
-    public void decipher(DecipherDto decipherDto) throws IOException {
-        ModuleUtil.cloneModule(decipherDto.getBackend().getName());
-        ModuleUtil.replaceFolders(decipherDto.getBackend().getName());
-        ModuleUtil.replaceFiles(decipherDto.getBackend().getName());
+    public void decipher(Decipher decipher) throws IOException, InterruptedException {
+        ModuleUtil.cloneModule(decipher.getBackend().getName());
+        ModuleUtil.replaceFolders(decipher.getBackend().getName());
+        ModuleUtil.replaceFiles(decipher.getBackend().getName());
+        for (Entity entity : decipher.getBackend().getEntity()) {
+            EntityUtil.cloneModule(decipher.getBackend().getName(), entity.getName());
+            EntityUtil.replaceFolders(decipher.getBackend().getName(), entity.getName());
+            EntityUtil.replaceFiles(decipher.getBackend().getName(), entity.getName());
+        }
+
     }
 }

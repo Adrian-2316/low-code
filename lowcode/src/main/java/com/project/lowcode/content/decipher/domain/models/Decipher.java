@@ -11,4 +11,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Decipher {
     private String id;
+    private Backend backend;
+    private Frontend frontend;
 }

@@ -6,4 +6,6 @@ import java.io.IOException;
 
 public interface DecipherPort {
     void decipher(Decipher decipher) throws IOException, InterruptedException;
+
+    Decipher save(Decipher decipher);
 }

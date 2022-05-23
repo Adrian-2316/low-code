@@ -1,11 +1,78 @@
 {
+  "id": "string",
+  "company": "string",
+  "project": "string",
   "backend": {
-    "type": "entity",
+    "relations": {
+      "firstEntity": "Second",
+      "secondEntity": "First",
+      "relation": "oneToMany",
+      "loading": "lazy",
+      "optional": false,
+      "owner": true
+    },
     "entity": [
       {
-        "name": "name",
-        "type": "type",
-        "notnull": "notnull"
+        "name": "First",
+        "fields": [
+          {
+            "name": "nombre",
+            "precision": "string",
+            "scale": "string",
+            "defaultValue": "string",
+            "length": 255,
+            "nullable": true,
+            "unique": false,
+            "autoIncrement": false,
+            "primaryKey": false,
+            "foreignKey": false,
+            "type": "String"
+          },
+          {
+            "name": "nombre",
+            "precision": "string",
+            "scale": "string",
+            "defaultValue": "string",
+            "length": 255,
+            "nullable": true,
+            "unique": true,
+            "autoIncrement": true,
+            "primaryKey": true,
+            "foreignKey": true,
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "name": "Second",
+        "fields": [
+          {
+            "name": "nombre",
+            "precision": "string",
+            "scale": "string",
+            "defaultValue": "string",
+            "length": 255,
+            "nullable": true,
+            "unique": true,
+            "autoIncrement": true,
+            "primaryKey": true,
+            "foreignKey": true,
+            "type": "String"
+          },
+          {
+            "name": "nombre",
+            "precision": "string",
+            "scale": "string",
+            "defaultValue": "string",
+            "length": 255,
+            "nullable": true,
+            "unique": true,
+            "autoIncrement": true,
+            "primaryKey": true,
+            "foreignKey": true,
+            "type": "String"
+          }
+        ]
       }
     ]
   },

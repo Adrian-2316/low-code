@@ -1,4 +1,4 @@
-package com.project.lowcode.content.decipher.adapter.in.rest.dtos;
+package com.project.lowcode.content.decipher.adapter.in.rest.dtos.backend;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

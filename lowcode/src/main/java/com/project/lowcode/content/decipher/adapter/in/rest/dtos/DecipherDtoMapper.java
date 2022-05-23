@@ -1,5 +1,9 @@
 package com.project.lowcode.content.decipher.adapter.in.rest.dtos;
 
+import com.project.lowcode.content.decipher.adapter.in.rest.dtos.backend.BackendDto;
+import com.project.lowcode.content.decipher.adapter.in.rest.dtos.backend.EntityDto;
+import com.project.lowcode.content.decipher.adapter.in.rest.dtos.backend.FieldDto;
+import com.project.lowcode.content.decipher.adapter.in.rest.dtos.frontend.FrontendDto;
 import com.project.lowcode.content.decipher.domain.models.*;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;

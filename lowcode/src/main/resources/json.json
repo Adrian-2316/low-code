@@ -1,0 +1,162 @@
+{
+  "pages": {
+    "selected": "",
+    "list": []
+  },
+  "layout": {
+    "name": "default",
+    "shape": {
+      "tag": "div",
+      "attrs": {
+        "className": "grid gap-2"
+      },
+      "children": [
+        {
+          "tag": "widget-slot",
+          "attrs": {
+            "id": "slot_0"
+          },
+          "children": []
+        },
+        {
+          "tag": "div",
+          "attrs": {
+            "className": "mt-0 grid grid-cols-2 gap-2"
+          },
+          "children": [
+            {
+              "tag": "widget-slot",
+              "attrs": {
+                "id": "slot_1"
+              },
+              "children": []
+            },
+            {
+              "tag": "widget-slot",
+              "attrs": {
+                "id": "slot_2"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "slots": [
+    {
+      "slotId": "slot_0",
+      "tag": "div",
+      "selected": false,
+      "submitUrl": null,
+      "widgets": [
+        "widget_4"
+      ]
+    },
+    {
+      "slotId": "slot_1",
+      "tag": "div",
+      "selected": false,
+      "submitUrl": null,
+      "widgets": [
+        "widget_2",
+        "widget_5"
+      ]
+    }
+  ],
+  "widgets": {
+    "widget_0": {
+      "widgetId": "widget_0",
+      "tag": "input-widget",
+      "widgetName": "Input",
+      "selected": false,
+      "class": "",
+      "attrs": {}
+    },
+    "widget_1": {
+      "widgetId": "widget_1",
+      "tag": "button-widget",
+      "widgetName": "Button",
+      "selected": false,
+      "class": "",
+      "attrs": {}
+    },
+    "widget_2": {
+      "widgetId": "widget_2",
+      "tag": "text-widget",
+      "widgetName": "Text",
+      "selected": false,
+      "class": "",
+      "attrs": {}
+    },
+    "widget_3": {
+      "widgetId": "widget_3",
+      "tag": "checkbox-widget",
+      "widgetName": "Checkbox",
+      "selected": false,
+      "class": "",
+      "attrs": {}
+    },
+    "widget_4": {
+      "widgetId": "widget_4",
+      "tag": "header-widget",
+      "widgetName": "Header",
+      "selected": false,
+      "class": "",
+      "attrs": {}
+    },
+    "widget_5": {
+      "widgetId": "widget_5",
+      "tag": "table-widget",
+      "widgetName": "Table",
+      "selected": false,
+      "class": "",
+      "attrs": {
+        "dataUrl": "http://localhost:3000/usersB",
+        "colsDef": [
+          {
+            "header": "Edad",
+            "dataQuery": [
+              "age"
+            ]
+          },
+          {
+            "header": "Nombre",
+            "dataQuery": [
+              "userName"
+            ]
+          },
+          {
+            "header": "Genero",
+            "dataQuery": [
+              "gender"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "drawers": {
+    "leftDrawer": {
+      "mode": "closed",
+      "view": null,
+      "data": null
+    },
+    "rightDrawer": {
+      "mode": "expanded",
+      "view": "TABLE_CONFIG",
+      "data": "widget_5"
+    }
+  },
+  "dialog": {
+    "confirmation": {
+      "opened": false,
+      "result": false
+    }
+  },
+  "contextMenu": {
+    "options": [],
+    "posx": 0,
+    "posy": 0
+  }
+}

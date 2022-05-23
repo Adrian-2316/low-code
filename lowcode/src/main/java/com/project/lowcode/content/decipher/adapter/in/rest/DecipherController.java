@@ -2,19 +2,17 @@ package com.project.lowcode.content.decipher.adapter.in.rest;
 
 import com.project.lowcode.content.decipher.adapter.in.rest.dtos.DecipherDto;
 import com.project.lowcode.content.decipher.adapter.in.rest.dtos.DecipherDtoMapper;
-import com.project.lowcode.content.decipher.adapter.in.rest.dtos.EntityDto;
+import com.project.lowcode.content.decipher.adapter.in.rest.dtos.backend.EntityDto;
 import com.project.lowcode.content.decipher.application.service.ports.in.DecipherPort;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.ValidationException;
 import java.io.IOException;
 
+@CrossOrigin("*")
 @AllArgsConstructor
 @RestController
 @Tag(name = "Decipher", description = "Decipher Json into modules, files...")
@@ -22,6 +20,11 @@ import java.io.IOException;
 public class DecipherController {
 
     private DecipherPort decipherPort;
+
+    @PostMapping("/json")
+    public void save(@RequestBody @Valid DecipherDto decipherDto) {
+        decipherPort.save(DecipherDtoMapper.INSTANCE.toDomainModel(decipherDto));
+    }
 
     @PostMapping("/decipher")
     public void decipher(@RequestBody @Valid DecipherDto decipherDto) throws IOException, ValidationException, InterruptedException {

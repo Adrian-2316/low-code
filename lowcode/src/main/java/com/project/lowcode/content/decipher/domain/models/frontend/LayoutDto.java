@@ -1,4 +1,4 @@
-package com.project.lowcode.content.decipher.adapter.in.rest.dtos;
+package com.project.lowcode.content.decipher.domain.models.frontend;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +9,8 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EntityDto {
+public class LayoutDto {
+
     private String name;
-    private List<FieldDto> fields;
+    private List<ShapeDto> list;
 }

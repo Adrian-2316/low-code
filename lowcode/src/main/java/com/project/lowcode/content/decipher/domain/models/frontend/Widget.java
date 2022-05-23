@@ -1,4 +1,4 @@
-package com.project.lowcode.content.decipher.adapter.in.rest.dtos.frontend;
+package com.project.lowcode.content.decipher.domain.models.frontend;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,11 +10,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class WidgetDto {
+public class Widget {
     private String widgetId;
     private String tag;
     private String widgetName;
     private Boolean selected;
     private String className;
-    private AttrsDto attrs;
+    private Attrs attrs;
 }

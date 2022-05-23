@@ -1,7 +1,7 @@
 package com.project.lowcode.content.decipher.application.service.logic;
 
-import com.project.lowcode.content.decipher.domain.models.Entity;
-import com.project.lowcode.content.decipher.domain.models.Field;
+import com.project.lowcode.content.decipher.domain.models.backend.Entity;
+import com.project.lowcode.content.decipher.domain.models.backend.Field;
 import com.project.lowcode.shared.StringUtils;
 
 import java.io.*;

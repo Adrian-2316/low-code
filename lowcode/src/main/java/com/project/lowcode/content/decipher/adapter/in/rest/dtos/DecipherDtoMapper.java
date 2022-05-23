@@ -4,7 +4,11 @@ import com.project.lowcode.content.decipher.adapter.in.rest.dtos.backend.Backend
 import com.project.lowcode.content.decipher.adapter.in.rest.dtos.backend.EntityDto;
 import com.project.lowcode.content.decipher.adapter.in.rest.dtos.backend.FieldDto;
 import com.project.lowcode.content.decipher.adapter.in.rest.dtos.frontend.FrontendDto;
-import com.project.lowcode.content.decipher.domain.models.*;
+import com.project.lowcode.content.decipher.domain.models.Decipher;
+import com.project.lowcode.content.decipher.domain.models.backend.Backend;
+import com.project.lowcode.content.decipher.domain.models.backend.Entity;
+import com.project.lowcode.content.decipher.domain.models.backend.Field;
+import com.project.lowcode.content.decipher.domain.models.frontend.Frontend;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

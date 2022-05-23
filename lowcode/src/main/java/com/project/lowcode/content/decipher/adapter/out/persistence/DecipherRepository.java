@@ -4,16 +4,15 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 import com.project.lowcode.content.decipher.adapter.out.persistence.entities.DecipherEntity;
-import com.project.lowcode.content.decipher.adapter.out.persistence.entities.DecipherEntityMapper;
-import com.project.lowcode.content.json.application.service.ports.out.JsonRepositoryPort;
-import com.project.lowcode.content.json.domain.models.Json;
+import com.project.lowcode.content.decipher.application.service.ports.out.DecipherRepositoryPort;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 @Repository
 @AllArgsConstructor
-public class DecipherRepository implements JsonRepositoryPort {
-    private DecipherJpaRepository jsonJpaRepository;
+public class DecipherRepository implements DecipherRepositoryPort {
+
+    private DecipherJpaRepository decipherJpaRepository;
 
     @Override
     public void generateCollection(String collection) {
@@ -23,8 +22,11 @@ public class DecipherRepository implements JsonRepositoryPort {
     }
 
     @Override
-    public Json generateDocument(Json json) {
-        DecipherEntity jsonEntity = DecipherEntityMapper.INSTANCE.toEntity(json);
-        return DecipherEntityMapper.INSTANCE.toDomainModel(jsonJpaRepository.save(jsonEntity));
+    public DecipherEntity generateDocument(DecipherEntity decipher) {
+        return decipherJpaRepository.save(decipher);
+    }
+
+    public DecipherEntity save(DecipherEntity decipherEntity) {
+        return decipherJpaRepository.save(decipherEntity);
     }
 }

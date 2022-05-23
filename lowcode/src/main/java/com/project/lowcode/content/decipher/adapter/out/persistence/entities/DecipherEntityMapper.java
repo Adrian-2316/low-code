@@ -1,8 +1,8 @@
 package com.project.lowcode.content.decipher.adapter.out.persistence.entities;
 
+import com.project.lowcode.content.decipher.domain.models.Decipher;
 import com.project.lowcode.content.json.adapter.out.persistence.entities.FieldEntity;
 import com.project.lowcode.content.json.domain.models.Field;
-import com.project.lowcode.content.json.domain.models.Json;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -10,11 +10,11 @@ import org.mapstruct.factory.Mappers;
 public interface DecipherEntityMapper {
     DecipherEntityMapper INSTANCE = Mappers.getMapper(DecipherEntityMapper.class);
 
-    DecipherEntity toEntity(Json json);
+    DecipherEntity toEntity(Decipher decipher);
 
     FieldEntity mapToEntity(Field field);
 
-    Json toDomainModel(DecipherEntity jsonEntity);
+    Decipher toDomainModel(DecipherEntity decipherEntity);
 
     FieldEntity[] toEntities(Field[] field);
 

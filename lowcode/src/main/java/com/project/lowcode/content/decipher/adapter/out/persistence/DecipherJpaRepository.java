@@ -5,6 +5,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface DecipherJpaRepository extends MongoRepository<DecipherEntity, Long> {
+public interface DecipherJpaRepository extends MongoRepository<DecipherEntity, String> {
 
 }

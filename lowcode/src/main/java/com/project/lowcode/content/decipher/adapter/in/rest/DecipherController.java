@@ -26,6 +26,22 @@ public class DecipherController {
         decipherPort.save(DecipherDtoMapper.INSTANCE.toDomainModel(decipherDto));
     }
 
+    @GetMapping("/json/{id}")
+    public DecipherDto get(@PathVariable("id") String id) {
+        return DecipherDtoMapper.INSTANCE.toDto(decipherPort.get(id));
+    }
+
+    @PutMapping("/json/{id}")
+    public void update(@PathVariable("id") String id, @RequestBody DecipherDto decipherDto) {
+        decipherPort.update(id, DecipherDtoMapper.INSTANCE.toDomainModel(decipherDto));
+    }
+
+    @PatchMapping("/json/{id}")
+    public void patch(@PathVariable("id") String id, @RequestBody DecipherDto decipherDto) {
+        decipherPort.patch(id, DecipherDtoMapper.INSTANCE.toDomainModel(decipherDto));
+    }
+
+
     @PostMapping("/decipher")
     public void decipher(@RequestBody @Valid DecipherDto decipherDto) throws IOException, ValidationException, InterruptedException {
         checkValidations(decipherDto);

@@ -29,4 +29,9 @@ public class DecipherRepository implements DecipherRepositoryPort {
     public DecipherEntity save(DecipherEntity decipherEntity) {
         return decipherJpaRepository.save(decipherEntity);
     }
+
+    @Override
+    public DecipherEntity get(String id) {
+        return decipherJpaRepository.findById(id).orElse(null);
+    }
 }

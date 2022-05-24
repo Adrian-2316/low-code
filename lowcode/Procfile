@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -jar -Dspring.profiles.active=production target/lowcode-0.0.1-SNAPSHOT.jar --port $PORT

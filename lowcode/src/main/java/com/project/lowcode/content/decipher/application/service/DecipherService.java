@@ -25,6 +25,27 @@ public class DecipherService implements DecipherPort {
     }
 
     @Override
+    public Decipher get(String id) {
+        return DecipherEntityMapper.INSTANCE.toDomainModel(decipherRepositoryPort.get(id));
+    }
+
+    @Override
+    public void update(String id, Decipher toDomainModel) {
+        DecipherEntity decipherEntity = DecipherEntityMapper.INSTANCE.toEntity(toDomainModel);
+        decipherEntity.setId(id);
+        decipherRepositoryPort.save(decipherEntity);
+    }
+
+    @Override
+    public void patch(String id, Decipher toDomainModel) {
+        DecipherEntity savedDecipherEntity = decipherRepositoryPort.get(id);
+        DecipherEntity decipherEntity = DecipherEntityMapper.INSTANCE.toEntity(toDomainModel);
+        savedDecipherEntity.update(decipherEntity);
+
+        decipherRepositoryPort.save(decipherEntity);
+    }
+
+    @Override
     public void decipher(Decipher decipher) throws IOException, InterruptedException {
         buildModule(decipher);
         buildEntities(decipher);

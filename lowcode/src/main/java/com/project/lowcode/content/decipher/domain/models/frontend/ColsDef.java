@@ -12,6 +12,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class ColsDef {
     private String header;
     private List<String> dataQuery;

@@ -9,7 +9,9 @@ import java.util.List;
 
 @Data
 @Builder
+
 @AllArgsConstructor
+
 @NoArgsConstructor
 public class BackendEntity {
     private String name;

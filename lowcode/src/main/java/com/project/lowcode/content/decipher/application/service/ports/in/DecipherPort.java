@@ -8,4 +8,10 @@ public interface DecipherPort {
     void decipher(Decipher decipher) throws IOException, InterruptedException;
 
     Decipher save(Decipher decipher);
+
+    Decipher get(String id);
+
+    void update(String id, Decipher toDomainModel);
+
+    void patch(String id, Decipher toDomainModel);
 }

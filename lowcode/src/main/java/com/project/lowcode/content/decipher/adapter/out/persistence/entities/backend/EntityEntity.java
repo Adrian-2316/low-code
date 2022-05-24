@@ -13,5 +13,5 @@ import java.util.List;
 @NoArgsConstructor
 public class EntityEntity {
     private String name;
-    private List<FieldEntity> fieldEntities;
+    private List<FieldEntity> fields;
 }

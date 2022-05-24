@@ -12,6 +12,7 @@ import java.util.Map;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class Widgets {
     private Map<String, Widget> widgets;
 }

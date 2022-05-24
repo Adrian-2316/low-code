@@ -4,16 +4,19 @@ package com.project.lowcode.content.decipher.adapter.out.persistence.entities.fr
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
 @AllArgsConstructor
+
+@NoArgsConstructor
 public class FrontendEntity {
-    private PagesEntity pagesEntity;
-    private LayoutEntity layoutEntity;
-    private SlotsEntity slotsEntity;
-    private WidgetsEntity widgetsEntity;
-    private DrawersEntity drawersEntity;
-    private DialogEntity dialogEntity;
-    private ContextMenuEntity contextMenuEntity;
+    private PagesEntity pages;
+    private LayoutEntity layout;
+    private SlotsEntity slots;
+    private WidgetsEntity widgets;
+    private DrawersEntity drawers;
+    private DialogEntity dialog;
+    private ContextMenuEntity contextMenu;
 }

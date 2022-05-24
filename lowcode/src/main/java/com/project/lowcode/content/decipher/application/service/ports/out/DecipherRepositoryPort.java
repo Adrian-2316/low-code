@@ -8,5 +8,7 @@ public interface DecipherRepositoryPort {
     DecipherEntity generateDocument(DecipherEntity decipher);
 
     DecipherEntity save(DecipherEntity decipher);
+
+    DecipherEntity get(String id);
 }
 

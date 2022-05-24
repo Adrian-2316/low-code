@@ -12,6 +12,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class ContextMenu {
     private List<String> options;
     private Integer posx;

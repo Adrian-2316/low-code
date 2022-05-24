@@ -3,10 +3,12 @@ package com.project.lowcode.content.decipher.adapter.in.rest.dtos.backend;
 import com.project.lowcode.shared.Type;
 import com.project.lowcode.validations.annotations.EnumValidator;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class FieldDto {

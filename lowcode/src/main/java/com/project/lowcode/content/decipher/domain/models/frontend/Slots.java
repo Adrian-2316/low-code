@@ -12,6 +12,7 @@ import java.util.Map;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class Slots {
     private Map<String, Slot> slots;
 }

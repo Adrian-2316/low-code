@@ -22,6 +22,7 @@ public class FieldDto {
     private Boolean autoIncrement;
     private Boolean primaryKey;
     private Boolean foreignKey;
+
     @EnumValidator(
             enumClazz = Type.class,
             message = "Invalid value found in entity type")

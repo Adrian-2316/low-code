@@ -13,20 +13,26 @@ import java.sql.SQLException;
 
 @AllArgsConstructor
 @RestController
-@Tag(name = "Generator", description = "Generate databases, schemas, collections, tabs, etc...")
+@Tag(name = "Generator", description = "Generate databases, schemas, collections, etc...")
 @RequestMapping("api/v0/generator")
 public class GeneratorController {
     private GeneratorPort generatorPort;
 
-    @GetMapping("/database")
+    @GetMapping("/sql/database")
     public void generateDatabase(@RequestParam String company) throws SQLException {
         generatorPort.generateDatabase(company);
     }
 
-    @GetMapping("/schema")
+    @GetMapping("/sql/schema")
     public void generateSchema(@RequestParam String company, @RequestParam String app) throws SQLException {
         generatorPort.generateSchema(company, app);
     }
+
+    @GetMapping("/mongodb/collection")
+    public void generateCollection(@RequestParam String collection) {
+        generatorPort.generateCollection(collection);
+    }
+
 
 }
 

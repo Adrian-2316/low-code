@@ -9,7 +9,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class EnumConstraint implements ConstraintValidator<EnumValidator, String> {
-
     List<String> valueList = null;
 
     @Override

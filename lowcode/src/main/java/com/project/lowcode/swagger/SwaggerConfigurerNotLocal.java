@@ -11,7 +11,7 @@ public class SwaggerConfigurerNotLocal {
 
     @Bean
     public GroupedOpenApi publicApi() {
-        return GroupedOpenApi.builder().group("Lowcode").packagesToScan("com.project.lowcode.content").pathsToMatch("/**").build();
+        return GroupedOpenApi.builder().group("Low code").packagesToScan("com.project.lowcode.content").pathsToMatch("/**").build();
 
     }
 }

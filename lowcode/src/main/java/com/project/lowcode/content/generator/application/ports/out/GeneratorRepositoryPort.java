@@ -10,5 +10,6 @@ public interface GeneratorRepositoryPort {
 
     void generateSchema(String company, String app) throws SQLException;
 
+    void generateCollection(String collection);
 }
 

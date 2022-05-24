@@ -23,5 +23,10 @@ public class GeneratorService implements GeneratorPort {
         generatorRepositoryPort.generateSchema(company, app);
     }
 
+    @Override
+    public void generateCollection(String collection) {
+        generatorRepositoryPort.generateCollection(collection);
+    }
+
 
 }

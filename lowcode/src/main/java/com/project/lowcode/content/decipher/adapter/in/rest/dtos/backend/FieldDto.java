@@ -18,7 +18,7 @@ public class FieldDto {
     private String defaultValue;
     private Integer length;
     private Boolean nullable = false;
-    private Boolean unique;
+    private Boolean unique = false;
     private Boolean autoIncrement;
     private Boolean primaryKey;
     private Boolean foreignKey;

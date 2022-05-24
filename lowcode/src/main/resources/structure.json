@@ -9,9 +9,9 @@
       "relation": "oneToMany",
       "loading": "lazy",
       "optional": false,
-      "owner": true
+      "owner": ""
     },
-    "entity": [
+    "entities": [
       {
         "name": "First",
         "fields": [

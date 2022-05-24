@@ -11,9 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 @AllArgsConstructor
-
 @NoArgsConstructor
-
 public class LeftDrawerEntity {
     private String mode;
     private String view;

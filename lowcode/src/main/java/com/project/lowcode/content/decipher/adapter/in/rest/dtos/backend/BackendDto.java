@@ -16,4 +16,5 @@ public class BackendDto {
     @NotNull
     private String name;
     private List<EntityDto> entity;
+    private List<RelationsDto> relations;
 }

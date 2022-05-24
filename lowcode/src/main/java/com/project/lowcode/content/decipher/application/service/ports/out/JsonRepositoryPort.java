@@ -7,7 +7,7 @@ public interface JsonRepositoryPort {
 
     Decipher get(String id);
 
-    void patch(String id, Decipher decipher);
+    Decipher patch(String id, Decipher decipher);
 
     Decipher update(String id, Decipher decipher);
 }

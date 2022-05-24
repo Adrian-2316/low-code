@@ -14,4 +14,5 @@ import java.util.List;
 public class Backend {
     private String name;
     private List<Entity> entity;
+    private List<Relations> relations;
 }

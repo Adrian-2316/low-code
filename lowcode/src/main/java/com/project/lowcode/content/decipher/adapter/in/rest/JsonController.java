@@ -37,7 +37,8 @@ public class JsonController {
     }
 
     @PatchMapping("/{id}")
-    public void patch(@PathVariable("id") String id, @RequestBody DecipherDto decipherDto) {
-        jsonPort.patch(id, DecipherDtoMapper.INSTANCE.toDomainModel(decipherDto));
+    public DecipherDto patch(@PathVariable("id") String id, @RequestBody DecipherDto decipherDto) {
+        Decipher patch = jsonPort.patch(id, DecipherDtoMapper.INSTANCE.toDomainModel(decipherDto));
+        return DecipherDtoMapper.INSTANCE.toDto(patch);
     }
 }

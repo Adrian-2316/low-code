@@ -1,0 +1,172 @@
+{
+  "id": "string",
+  "backend": {
+    "name": "string",
+    "entity": [
+      {
+        "name": "string",
+        "fields": [
+          {
+            "name": "string",
+            "precision": "string",
+            "scale": "string",
+            "defaultValue": "string",
+            "length": 0,
+            "nullable": true,
+            "unique": true,
+            "autoIncrement": true,
+            "primaryKey": true,
+            "foreignKey": true,
+            "type": "String"
+          }
+        ]
+      }
+    ]
+  },
+  "frontend": {
+    "pages": {
+      "selected": "string",
+      "list": [
+        "string"
+      ]
+    },
+    "layout": {
+      "name": "string",
+      "list": [
+        {
+          "tab": "string",
+          "attributes": {
+            "className": "string",
+            "id": "string",
+            "dataUrl": "string",
+            "colsDef": {
+              "header": "string",
+              "dataQuery": [
+                "string"
+              ]
+            }
+          },
+          "children": [
+            {
+              "tag": "string"
+            }
+          ]
+        }
+      ]
+    },
+    "slots": {
+      "slots": {
+        "additionalProp1": {
+          "slotId": "string",
+          "tag": "string",
+          "selected": true,
+          "submitUrl": "string",
+          "widgetsReference": [
+            "string"
+          ]
+        },
+        "additionalProp2": {
+          "slotId": "string",
+          "tag": "string",
+          "selected": true,
+          "submitUrl": "string",
+          "widgetsReference": [
+            "string"
+          ]
+        },
+        "additionalProp3": {
+          "slotId": "string",
+          "tag": "string",
+          "selected": true,
+          "submitUrl": "string",
+          "widgetsReference": [
+            "string"
+          ]
+        }
+      }
+    },
+    "widgets": {
+      "widgets": {
+        "additionalProp1": {
+          "widgetId": "string",
+          "tag": "string",
+          "widgetName": "string",
+          "selected": true,
+          "className": "string",
+          "attrs": {
+            "className": "string",
+            "id": "string",
+            "dataUrl": "string",
+            "colsDef": {
+              "header": "string",
+              "dataQuery": [
+                "string"
+              ]
+            }
+          }
+        },
+        "additionalProp2": {
+          "widgetId": "string",
+          "tag": "string",
+          "widgetName": "string",
+          "selected": true,
+          "className": "string",
+          "attrs": {
+            "className": "string",
+            "id": "string",
+            "dataUrl": "string",
+            "colsDef": {
+              "header": "string",
+              "dataQuery": [
+                "string"
+              ]
+            }
+          }
+        },
+        "additionalProp3": {
+          "widgetId": "string",
+          "tag": "string",
+          "widgetName": "string",
+          "selected": true,
+          "className": "string",
+          "attrs": {
+            "className": "string",
+            "id": "string",
+            "dataUrl": "string",
+            "colsDef": {
+              "header": "string",
+              "dataQuery": [
+                "string"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "drawers": {
+      "leftDrawer": {
+        "mode": "string",
+        "view": "string",
+        "data": "string"
+      },
+      "rightDrawer": {
+        "mode": "string",
+        "view": "string",
+        "data": "string"
+      }
+    },
+    "dialog": {
+      "confirmation": {
+        "opened": true,
+        "result": "string"
+      }
+    },
+    "contextMenu": {
+      "options": [
+        "string"
+      ],
+      "posx": 0,
+      "posy": 0
+    }
+  }
+}

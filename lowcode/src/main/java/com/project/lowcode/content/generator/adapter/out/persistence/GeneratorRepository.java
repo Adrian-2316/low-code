@@ -15,13 +15,13 @@ import java.sql.Statement;
 @Repository
 public class GeneratorRepository implements GeneratorRepositoryPort {
 
-    @Value("${spring.datasource.url}")
+    @Value("${spring.data.url}")
     private String databaseUrl;
 
-    @Value("${spring.datasource.username}")
+    @Value("${spring.data.username}")
     private String databaseUsername;
 
-    @Value("${spring.datasource.password}")
+    @Value("${spring.data.password}")
     private String databasePassword;
 
     @Override

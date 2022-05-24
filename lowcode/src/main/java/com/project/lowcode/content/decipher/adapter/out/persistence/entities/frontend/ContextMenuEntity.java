@@ -14,7 +14,6 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class ContextMenuEntity {
     private List<String> options;
     private Integer posx;

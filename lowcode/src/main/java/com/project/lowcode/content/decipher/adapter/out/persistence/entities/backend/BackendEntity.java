@@ -16,4 +16,5 @@ import java.util.List;
 public class BackendEntity {
     private String name;
     private List<EntityEntity> entity;
+    private List<RelationsEntity> relations;
 }

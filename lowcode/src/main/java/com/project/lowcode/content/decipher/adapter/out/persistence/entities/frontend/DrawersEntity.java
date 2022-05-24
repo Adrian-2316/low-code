@@ -11,9 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 @AllArgsConstructor
-
 @NoArgsConstructor
-
 public class DrawersEntity {
     private LeftDrawerEntity leftDrawer;
     private RightDrawerEntity rightDrawer;

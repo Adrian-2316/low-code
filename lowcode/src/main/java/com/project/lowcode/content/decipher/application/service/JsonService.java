@@ -27,8 +27,8 @@ public class JsonService implements JsonPort {
     }
 
     @Override
-    public void patch(String id, Decipher decipher) {
-        jsonRepositoryPort.patch(id, decipher);
+    public Decipher patch(String id, Decipher decipher) {
+        return jsonRepositoryPort.patch(id, decipher);
     }
 
 }

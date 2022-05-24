@@ -13,9 +13,7 @@ import java.util.List;
 @Data
 @Builder
 @AllArgsConstructor
-
 @NoArgsConstructor
-
 public class ColsDefEntity {
     private String header;
     private List<String> dataQuery;

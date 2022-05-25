@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Map;
 
 public class EntityUtil {
-
     public static void replaceFiles(String module, String name) throws IOException {
         name = StringUtils.toUpperCamelCase(name);
         String currentDirectoryLocation = "../" + module + "/src/main/java/com/project/" + module + "/content/" + StringUtils.toLowerCamelCase(name);
@@ -108,6 +107,7 @@ public class EntityUtil {
 
     public static void addConstructorFields(Decipher decipher) throws IOException {
         String module = StringUtils.toLowerCamelCase(decipher.getBackend().getName());
+
         for (Entity entity : decipher.getBackend().getEntity()) {
             String entityName = StringUtils.toUpperCamelCase(entity.getName());
             List<File> files = new ArrayList<>();
@@ -116,7 +116,9 @@ public class EntityUtil {
             files.add(new File(routePath + "/adapter/out/persistence/entity/" + entityName + "Entity.java"));
             files.add(new File(routePath + "/application/service/" + entityName + "Command.java"));
             files.add(new File(routePath + "/domain/models/" + entityName + ".java"));
-            FileUtil.addConstructorFields(entity, files);
+            FileUtil.addConstructorFields(entity, decipher.getBackend().getRelations(), files);
+            FileUtil.addRelations(entity, decipher.getBackend().getRelations(), files);
         }
+
     }
 }

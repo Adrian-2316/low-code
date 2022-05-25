@@ -34,6 +34,7 @@ public class JsonRepository implements JsonRepositoryPort {
 
     @Override
     public Decipher update(String id, Decipher decipher) {
+        jsonJpaRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Json with id " + id + " not found"));
         return save(decipher);
     }
 }

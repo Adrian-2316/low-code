@@ -20,12 +20,10 @@ import java.io.IOException;
 @Tag(name = "Decipher", description = "Decipher Json into modules, files...")
 @RequestMapping("api/v0/decipher")
 public class DecipherController {
-
     private DecipherPort decipherPort;
 
     @PostMapping("/")
     public void decipher(@RequestBody @Valid DecipherDto decipherDto) throws IOException, ValidationException, InterruptedException {
         decipherPort.decipher(DecipherDtoMapper.INSTANCE.toDomainModel(decipherDto));
     }
-
 }

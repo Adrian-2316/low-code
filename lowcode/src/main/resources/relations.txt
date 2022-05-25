@@ -1,0 +1,17 @@
+@OneToOne(cascade = CascadeType.ALL)
+@JoinColumn(name = "id_user", referencedColumnName = "id")
+private First first;
+
+@OneToOne(mappedBy = "first")
+private Second second;
+
+
+@ManyToOne()
+@JoinColumn(name = "id_first", referencedColumnName = "id")
+private First first;
+
+@OneToMany(mappedBy = "first")
+private Set<Second> second;
+
+@ManyToMany()
+private List<User> users1;

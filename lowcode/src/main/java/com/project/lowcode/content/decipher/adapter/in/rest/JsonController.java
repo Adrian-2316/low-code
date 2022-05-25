@@ -16,7 +16,6 @@ import javax.validation.Valid;
 @Tag(name = "Json", description = "Json CRUD operations")
 @RequestMapping("api/v0/json")
 public class JsonController {
-
     private JsonPort jsonPort;
 
     @PostMapping("/")

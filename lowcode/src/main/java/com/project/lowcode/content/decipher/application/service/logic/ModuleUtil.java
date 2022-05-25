@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.Map;
 
 public class ModuleUtil {
-
     public static void cloneModule(String name)
             throws IOException {
         String sourceDirectoryLocation = "../template";

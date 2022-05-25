@@ -1,6 +1,6 @@
 package com.project.lowcode.shared;
 
-public enum JpaRelations {
+public enum RelationType {
     OneToOne,
     OneToMany,
     ManyToOne,

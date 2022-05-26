@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
@@ -15,6 +16,8 @@ import java.util.List;
 public class BackendDto {
     @NotNull
     private String name;
+    @Valid
     private List<EntityDto> entity;
+    @Valid
     private List<RelationsDto> relations;
 }

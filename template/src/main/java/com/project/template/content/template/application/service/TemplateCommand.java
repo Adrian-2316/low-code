@@ -11,4 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TemplateCommand {
     private Long id;
+    
+    //Insert your code her
+
 }

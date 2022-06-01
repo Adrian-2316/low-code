@@ -21,6 +21,8 @@ public class TemplateEntity {
     @Column(name = "id")
     private Long id;
 
+    //Insert your code here
+
     public void copyProperties(Template template) {
         BeanUtils.copyProperties(template, this);
     }

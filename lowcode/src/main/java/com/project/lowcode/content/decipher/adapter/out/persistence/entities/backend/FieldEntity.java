@@ -13,8 +13,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class FieldEntity {
     private String name;
-    private String precision;
-    private String scale;
+    private Integer precision;
+    private Integer scale;
     private String defaultValue;
     private Integer length;
     private Boolean nullable;

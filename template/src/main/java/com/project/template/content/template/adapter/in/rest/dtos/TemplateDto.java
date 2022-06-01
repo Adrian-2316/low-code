@@ -12,4 +12,6 @@ import lombok.NoArgsConstructor;
 public class TemplateDto {
     private Long id;
 
+    //Insert your code here
+
 }

@@ -4,20 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="478564a0-803e-4b6a-9b11-531fb9401739" name="Changes" comment="Decipher update.&#10;Generator update.&#10;Logs added.">
-      <change afterPath="$PROJECT_DIR$/lowcode/src/main/resources/relations.txt" afterDir="false" />
+    <list default="true" id="478564a0-803e-4b6a-9b11-531fb9401739" name="Changes" comment="&#10;compiling: yes/no&#10;known bugs: yes/no&#10;tested: yes/no&#10;feature: &lt;text&gt;&#10;feature finished: yes/no&#10;comments: &lt;text&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/lowcode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/lowcode.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/DecipherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/DecipherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/JsonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/JsonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/RelationsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/RelationsDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/JsonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/JsonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/entities/backend/RelationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/entities/backend/RelationsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/DecipherDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/DecipherDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/BackendDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/BackendDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/FieldDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/FieldDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/entities/backend/EntityEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/entities/backend/EntityEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/entities/backend/FieldEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/entities/backend/FieldEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/DecipherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/DecipherService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/EntityUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/EntityUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/ModuleUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/ModuleUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/domain/models/backend/Relations.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/domain/models/backend/Relations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/shared/JpaRelations.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/shared/RelationType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/ports/in/DecipherPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/ports/in/DecipherPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/domain/models/backend/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/domain/models/backend/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/in/rest/dtos/TemplateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/in/rest/dtos/TemplateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/out/persistence/entity/TemplateEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/out/persistence/entity/TemplateEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/application/service/TemplateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/application/service/TemplateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/domain/models/Template.java" beforeDir="false" afterPath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/domain/models/Template.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +45,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
@@ -88,12 +95,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/adri9/IdeaProjects/lowcode-project/template/src/main/java/com/project/template&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/ruben.martinez/Documents/Glucemy-front",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "32a485fb784f151bdcfeaad945ae6c03"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.project.lowcode.content.generator.adapter.in.rest" />
@@ -189,6 +198,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652980053793</updated>
+      <workItem from="1653984444295" duration="59000" />
     </task>
     <task id="LOCAL-00001" summary="Json update">
       <created>1653121288614</created>
@@ -304,6 +314,9 @@
     </task>
     <option name="localTasksCounter" value="17" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

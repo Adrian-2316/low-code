@@ -13,15 +13,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class FieldDto {
     private String name;
-    private String precision;
-    private String scale;
+    private Integer precision;
+    private Integer scale;
     private String defaultValue;
     private Integer length;
     private Boolean nullable = false;
     private Boolean unique = false;
-    private Boolean autoIncrement;
-    private Boolean primaryKey;
-    private Boolean foreignKey;
+    private Boolean autoIncrement = false;
 
     @EnumValidator(
             enumClazz = Type.class,

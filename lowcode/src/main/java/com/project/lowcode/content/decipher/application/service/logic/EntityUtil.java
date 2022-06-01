@@ -105,7 +105,7 @@ public class EntityUtil {
         }
     }
 
-    public static void addConstructorFields(Decipher decipher) throws IOException {
+    public static void addConstructorFields(Decipher decipher) throws IOException, IllegalAccessException {
         String module = StringUtils.toLowerCamelCase(decipher.getBackend().getName());
 
         for (Entity entity : decipher.getBackend().getEntity()) {

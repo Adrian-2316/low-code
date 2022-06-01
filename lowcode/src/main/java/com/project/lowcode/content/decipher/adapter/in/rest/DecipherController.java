@@ -23,7 +23,7 @@ public class DecipherController {
     private DecipherPort decipherPort;
 
     @PostMapping("/")
-    public void decipher(@RequestBody @Valid DecipherDto decipherDto) throws IOException, ValidationException, InterruptedException {
+    public void decipher(@RequestBody @Valid DecipherDto decipherDto) throws IOException, ValidationException, InterruptedException, IllegalAccessException {
         decipherPort.decipher(DecipherDtoMapper.INSTANCE.toDomainModel(decipherDto));
     }
 }

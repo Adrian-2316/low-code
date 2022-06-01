@@ -14,13 +14,13 @@ import java.io.IOException;
 @Service
 public class DecipherService implements DecipherPort {
     @Override
-    public void decipher(Decipher decipher) throws IOException, InterruptedException {
+    public void decipher(Decipher decipher) throws IOException, InterruptedException, IllegalAccessException {
         buildModule(decipher);
         buildEntities(decipher);
         buildFields(decipher);
     }
 
-    private void buildFields(Decipher decipher) throws IOException {
+    private void buildFields(Decipher decipher) throws IOException, IllegalAccessException {
         EntityUtil.addConstructorFields(decipher);
     }
 

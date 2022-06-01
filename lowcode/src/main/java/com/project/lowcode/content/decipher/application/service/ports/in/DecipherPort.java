@@ -5,5 +5,5 @@ import com.project.lowcode.content.decipher.domain.models.Decipher;
 import java.io.IOException;
 
 public interface DecipherPort {
-    void decipher(Decipher decipher) throws IOException, InterruptedException;
+    void decipher(Decipher decipher) throws IOException, InterruptedException, IllegalAccessException;
 }

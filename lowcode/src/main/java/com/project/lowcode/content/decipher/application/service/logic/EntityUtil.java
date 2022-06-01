@@ -105,20 +105,21 @@ public class EntityUtil {
         }
     }
 
-    public static void addConstructorFields(Decipher decipher) throws IOException, IllegalAccessException {
-        String module = StringUtils.toLowerCamelCase(decipher.getBackend().getName());
-
+    public static void addConstructorLines(Decipher decipher) throws IOException, IllegalAccessException {
         for (Entity entity : decipher.getBackend().getEntity()) {
-            String entityName = StringUtils.toUpperCamelCase(entity.getName());
-            List<File> files = new ArrayList<>();
-            String routePath = "../" + module + "/src/main/java/com/project/" + module + "/content/" + entityName;
-            files.add(new File(routePath + "/adapter/in/rest/dtos/" + entityName + "Dto.java"));
-            files.add(new File(routePath + "/adapter/out/persistence/entity/" + entityName + "Entity.java"));
-            files.add(new File(routePath + "/application/service/" + entityName + "Command.java"));
-            files.add(new File(routePath + "/domain/models/" + entityName + ".java"));
-            FileUtil.addConstructorFields(entity, decipher.getBackend().getRelations(), files);
-            FileUtil.addRelations(entity, decipher.getBackend().getRelations(), files);
+            List<File> files = getTemplateFiles(StringUtils.toLowerCamelCase(decipher.getBackend().getName()), StringUtils.toUpperCamelCase(entity.getName()));
+            FileUtil.removeConstructorLines(files);
+            FileUtil.addConstructorLines(entity, decipher.getBackend().getRelations(), files);
         }
+    }
 
+    private static List<File> getTemplateFiles(String module, String entityName) {
+        List<File> files = new ArrayList<>();
+        String routePath = "../" + module + "/src/main/java/com/project/" + module + "/content/" + entityName;
+        files.add(new File(routePath + "/adapter/in/rest/dtos/" + entityName + "Dto.java"));
+        files.add(new File(routePath + "/adapter/out/persistence/entity/" + entityName + "Entity.java"));
+        files.add(new File(routePath + "/application/service/" + entityName + "Command.java"));
+        files.add(new File(routePath + "/domain/models/" + entityName + ".java"));
+        return files;
     }
 }

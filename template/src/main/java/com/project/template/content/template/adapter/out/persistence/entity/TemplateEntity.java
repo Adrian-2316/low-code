@@ -20,8 +20,8 @@ public class TemplateEntity {
     @GeneratedValue
     @Column(name = "id")
     private Long id;
-
-    //Insert your code here
+    // Generation code segment start
+    // Generation code segment end
 
     public void copyProperties(Template template) {
         BeanUtils.copyProperties(template, this);

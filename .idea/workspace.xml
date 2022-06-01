@@ -4,20 +4,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="478564a0-803e-4b6a-9b11-531fb9401739" name="Changes" comment="&#10;compiling: yes/no&#10;known bugs: yes/no&#10;tested: yes/no&#10;feature: &lt;text&gt;&#10;feature finished: yes/no&#10;comments: &lt;text&gt;">
+    <list default="true" id="478564a0-803e-4b6a-9b11-531fb9401739" name="Changes" comment="Decipher update.&#10;Generator update.&#10;Logs added.">
+      <change afterPath="$PROJECT_DIR$/string/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/StringApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/string/adapter/in/rest/StringController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/string/adapter/in/rest/dtos/StringDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/string/adapter/in/rest/dtos/StringDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/string/adapter/out/persistence/StringJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/string/adapter/out/persistence/StringRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/string/adapter/out/persistence/entity/StringEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/string/adapter/out/persistence/entity/StringEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/string/application/service/StringCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/string/application/service/StringService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/string/application/service/ports/in/StringPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/string/application/service/ports/out/StringMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/string/application/service/ports/out/StringRepositoryPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/string/domain/models/String.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/template/adapter/in/rest/TemplateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/template/adapter/in/rest/dtos/TemplateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/template/adapter/in/rest/dtos/TemplateDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/template/adapter/out/persistence/TemplateJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/template/adapter/out/persistence/TemplateRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/template/adapter/out/persistence/entity/TemplateEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/template/adapter/out/persistence/entity/TemplateEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/template/application/service/TemplateCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/template/application/service/TemplateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/template/application/service/ports/in/TemplatePort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/template/application/service/ports/out/TemplateMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/template/application/service/ports/out/TemplateRepositoryPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/content/template/domain/models/Template.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/log/AsyncLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/log/RequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/log/RequestLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/log/streams/BufferedServletInputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/log/streams/TeeServletOutputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/log/wrappers/BufferedRequestWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/log/wrappers/BufferedResponseWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/swagger/SwaggerConfigurerNotLocal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/swagger/SwaggerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/validations/annotations/EnumValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/java/com/project/string/validations/constraints/EnumConstraint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/src/test/java/com/project/template/TemplateApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/lowcode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/lowcode.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/DecipherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/DecipherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/DecipherDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/DecipherDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/BackendDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/BackendDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/FieldDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/FieldDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/entities/backend/EntityEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/entities/backend/EntityEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/entities/backend/FieldEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/entities/backend/FieldEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/DecipherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/DecipherService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/EntityUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/EntityUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/ports/in/DecipherPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/ports/in/DecipherPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/domain/models/backend/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/domain/models/backend/Field.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/in/rest/dtos/TemplateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/in/rest/dtos/TemplateDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/out/persistence/entity/TemplateEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/out/persistence/entity/TemplateEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/application/service/TemplateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/application/service/TemplateCommand.java" afterDir="false" />
@@ -44,6 +80,11 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
@@ -95,14 +136,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ruben.martinez/Documents/Glucemy-front",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "32a485fb784f151bdcfeaad945ae6c03"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ruben.martinez/Documents/Glucemy-front&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;32a485fb784f151bdcfeaad945ae6c03&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.project.lowcode.content.generator.adapter.in.rest" />

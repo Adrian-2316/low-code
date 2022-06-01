@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class TemplateDto {
     private Long id;
-
-    //Insert your code here
+    // Generation code segment start
+    // Generation code segment end
 
 }

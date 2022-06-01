@@ -11,7 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TemplateCommand {
     private Long id;
-    
-    //Insert your code her
+
+    // Generation code segment start
+    // Generation code segment end
 
 }

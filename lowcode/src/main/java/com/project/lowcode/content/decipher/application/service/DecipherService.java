@@ -21,7 +21,7 @@ public class DecipherService implements DecipherPort {
     }
 
     private void buildFields(Decipher decipher) throws IOException, IllegalAccessException {
-        EntityUtil.addConstructorFields(decipher);
+        EntityUtil.addConstructorLines(decipher);
     }
 
     private void buildEntities(Decipher decipher) throws IOException {

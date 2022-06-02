@@ -15,3 +15,23 @@ private Set<Second> second;
 
 @ManyToMany()
 private List<User> users1;
+
+,
+    "relations": [
+      {
+        "firstEntity": "string",
+        "secondEntity": "string",
+        "targetEntity": "string",
+        "optional": true,
+        "loading": true,
+        "insertable": true,
+        "nullable": true,
+        "unique": true,
+        "orphanRemoval": true,
+
+        "updatable": true,
+        "fetchType": "LAZY",
+        "cascadeType": "ALL",
+        "relationType": "OneToOne"
+      }
+    ]

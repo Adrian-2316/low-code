@@ -3,6 +3,7 @@ package com.project.lowcode.content.decipher.application.service.logic;
 import com.project.lowcode.content.decipher.domain.models.backend.Entity;
 import com.project.lowcode.content.decipher.domain.models.backend.Field;
 import com.project.lowcode.content.decipher.domain.models.backend.Relations;
+import com.project.lowcode.shared.RelationType;
 import com.project.lowcode.shared.StringUtils;
 import org.apache.commons.io.FileUtils;
 
@@ -72,9 +73,14 @@ public class FileUtil {
                 lines.add(index++, buildJpaColumn(field));
             }
             // Field declaration
-            lines.add(index++, String.format("\tprivate %s %s;", field.getType(), field.getName()));
-            lines.add(index++, System.lineSeparator());
+            index = writeFieldDeclaration(lines, index, field.getType().toString(), field.getName());
         }
+    }
+
+    private static int writeFieldDeclaration(List<String> lines, int index, String field, String name) {
+        lines.add(index++, String.format("\tprivate %s %s;", field, name));
+        lines.add(index++, System.lineSeparator());
+        return index;
     }
 
     /**
@@ -125,38 +131,61 @@ public class FileUtil {
 
     public static void addRelations(Entity entity, List<Relations> relations, File file, List<String> lines, int index) throws IOException {
         for (Relations relation : relations) {
-            // Persistence JPA entity '@Column(...)'
-            if (entity.getName().equalsIgnoreCase(file.getName().replace("Entity.java", ""))) {
-                lines.add(index++, buildJpaRelations(relation));
-            }
-            // Field declaration
-            lines.add(index++, String.format("\tprivate %s %s;", field.getType(), field.getName()));
-            lines.add(index++, System.lineSeparator());
-        }
-
-    }
-
-    private static String buildJpaRelations(Relations relation) {
-        String column = "\t@Column(%s %s %s %s %s %s %s)";
-        List<String> availableProperties = new ArrayList<>();
-        java.lang.reflect.Field[] fields = field.getClass().getDeclaredFields();
-        for (java.lang.reflect.Field aux : fields) {
-            aux.setAccessible(true);
-            if (aux.get(field) == null) continue;
-            if (aux.getName().equals("autoIncrement")) continue;
-            if (!aux.getName().equals("defaultValue")) {
-                String value = aux.getName().equals("name") ? "\"" + aux.get(field) + "\"" : aux.get(field).toString();
-                availableProperties.add(aux.get(field) != null ? String.format("%s = %s ,", aux.getName(), value) : "");
+            if (!relation.getFirstEntity().equals(entity.getName()) && !relation.getSecondEntity().equals(entity.getName()))
                 continue;
+            if (relation.getFirstEntity().equals(entity.getName())) {
+                // Persistence JPA relation
+                index = buildRelation(entity, file, lines, index, relation);
+                String relationType = buildRelationType(relation);
+                index = writeFieldDeclaration(lines, index, relationType, StringUtils.toLowerCamelCase(relation.getFirstEntity()));
+            } else {
+                if (entity.getName().equalsIgnoreCase(file.getName().replace("Entity.java", ""))) {
+                    if (relation.getFirstEntity().equals(entity.getName())) {
+                        lines.add(index++, buildJpaRelation(relation, entity));
+                    }
+                }
+                index = writeFieldDeclaration(lines, index, relation.getSecondEntity(), relation.getSecondEntity());
+
             }
-            availableProperties.add(aux.get(field) != null ? String.format("columnDefinition = \"default '%s'\" ,", aux.get(field)) : "");
         }
-        return replaceColumnProperties(column, availableProperties);
     }
 
-    private static void writeRelation(Relations relation, StringBuilder oldContent) {
-        String fetchType = "";
-        String cascadeType = "";
+    private static String buildRelationType(Relations relation) {
+        String relationType = StringUtils.toUpperCamelCase(relation.getFirstEntity());
+        if (relation.getRelationType().equals(RelationType.ManyToOne) || relation.getRelationType().equals(RelationType.ManyToMany)) {
+            relationType += "Set<" + StringUtils.toUpperCamelCase(relation.getSecondEntity()) + ">";
+        }
+        return relationType;
+    }
+
+    private static int buildRelation(Entity entity, File file, List<String> lines, int index, Relations relation) {
+        if (entity.getName().equalsIgnoreCase(file.getName().replace("Entity.java", ""))) {
+            lines.add(index++, buildJpaRelation(relation, entity));
+        }
+        return index;
+    }
+
+    private static String buildJpaRelation(Relations relation, Entity entity) {
+        boolean isOwnerSide = !relation.getFirstEntity().equals(entity.getName());
+        String templateBuilder = "\t@%r( %s %s %s %s %s %s %s )";
+        String relationBuilder = templateBuilder.replace("%r", relation.getRelationType().toString());
+        if (isOwnerSide) relationBuilder += "\n(%s %s %s %s %s %s %s)";
+        String relationDefinition;
+        if (!isOwnerSide) {
+            relationDefinition = "mappedBy = \"" + StringUtils.toLowerCamelCase(relation.getSecondEntity()) + "\"";
+            relationBuilder = String.format(relationDefinition, "", "", "", "", "", "");
+        } else {
+            relationDefinition = "@JoinColumn(name = \"id\")";
+            String insertable = relation.getInsertable() ? "" : "insertable = false";
+            String updatable = relation.getUpdatable() ? "" : "updatable = false";
+            String fetchType = relation.getFetchType() != null ? "fetch = FetchType." + relation.getFetchType().toString() : "";
+            String cascadeType = relation.getCascadeType() != null ? "cascade = CascadeType." + relation.getCascadeType().toString() : "";
+            String loading = relation.getLoading() != null ? "load = " + relation.getLoading().toString() : "";
+            String optional = relation.getOptional() ? "optional = true" : "";
+            relationBuilder = String.format(relationDefinition, insertable, updatable, fetchType, cascadeType, loading, optional);
+        }
+
+        return relationBuilder;
     }
 
 }

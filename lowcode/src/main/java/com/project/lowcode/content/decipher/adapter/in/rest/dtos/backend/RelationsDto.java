@@ -19,7 +19,6 @@ public class RelationsDto {
     private String firstEntity;
     private String secondEntity;
     private String targetEntity;
-    private Boolean isFirstOwner;
     private Boolean optional;
     private Boolean loading;
     private Boolean insertable;

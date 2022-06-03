@@ -31,4 +31,9 @@ public class JsonService implements JsonPort {
         return jsonRepositoryPort.patch(id, decipher);
     }
 
+    @Override
+    public void delete(String id) {
+        jsonRepositoryPort.delete(id);
+    }
+
 }

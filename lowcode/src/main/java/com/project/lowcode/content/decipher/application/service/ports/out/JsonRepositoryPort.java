@@ -10,5 +10,7 @@ public interface JsonRepositoryPort {
     Decipher patch(String id, Decipher decipher);
 
     Decipher update(String id, Decipher decipher);
+
+    void delete(String id);
 }
 

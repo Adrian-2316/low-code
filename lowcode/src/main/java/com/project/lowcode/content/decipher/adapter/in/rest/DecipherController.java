@@ -1,16 +1,13 @@
 package com.project.lowcode.content.decipher.adapter.in.rest;
 
-import com.project.lowcode.content.decipher.adapter.in.rest.dtos.DecipherDto;
-import com.project.lowcode.content.decipher.adapter.in.rest.dtos.DecipherDtoMapper;
 import com.project.lowcode.content.decipher.application.service.ports.in.DecipherPort;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.Valid;
 import javax.validation.ValidationException;
 import java.io.IOException;
 
@@ -22,8 +19,8 @@ import java.io.IOException;
 public class DecipherController {
     private DecipherPort decipherPort;
 
-    @PostMapping("/")
-    public void decipher(@RequestBody @Valid DecipherDto decipherDto) throws IOException, ValidationException, InterruptedException, IllegalAccessException {
-        decipherPort.decipher(DecipherDtoMapper.INSTANCE.toDomainModel(decipherDto));
+    @PostMapping("{id}")
+    public void decipher(@PathVariable String id) throws IOException, ValidationException, InterruptedException, IllegalAccessException {
+        decipherPort.decipher(id);
     }
 }

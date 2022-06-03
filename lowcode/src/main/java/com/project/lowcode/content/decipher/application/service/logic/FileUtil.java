@@ -16,8 +16,8 @@ import java.util.Objects;
 import java.util.regex.Pattern;
 
 public class FileUtil {
-    public static String GENERATION_CODE_SEGMENT_START = "\t// Generation code segment start";
-    public static String GENERATION_CODE_SEGMENT_END = "\t// Generation code segment end";
+    public static String GENERATION_CODE_SEGMENT_START = "    // Generation code segment start";
+    public static String GENERATION_CODE_SEGMENT_END = "    // Generation code segment end";
 
     public static void replaceText(String newString, File fileToBeModified) throws IOException {
         String data = FileUtils.readFileToString(fileToBeModified, "UTF-8");
@@ -166,14 +166,14 @@ public class FileUtil {
     }
 
     private static String buildJpaRelation(Relations relation, Entity entity) {
-        boolean isOwnerSide = !relation.getFirstEntity().equals(entity.getName());
+        boolean isOwnerSide = relation.getFirstEntity().equals(entity.getName());
         String templateBuilder = "\t@%r( %s %s %s %s %s %s %s )";
         String relationBuilder = templateBuilder.replace("%r", relation.getRelationType().toString());
         if (isOwnerSide) relationBuilder += "\n(%s %s %s %s %s %s %s)";
         String relationDefinition;
         if (!isOwnerSide) {
             relationDefinition = "mappedBy = \"" + StringUtils.toLowerCamelCase(relation.getSecondEntity()) + "\"";
-            relationBuilder = String.format(relationDefinition, "", "", "", "", "", "");
+            relationBuilder = String.format(relationBuilder, relationDefinition, "", "", "", "", "", "");
         } else {
             relationDefinition = "@JoinColumn(name = \"id\")";
             String insertable = relation.getInsertable() ? "" : "insertable = false";
@@ -182,7 +182,7 @@ public class FileUtil {
             String cascadeType = relation.getCascadeType() != null ? "cascade = CascadeType." + relation.getCascadeType().toString() : "";
             String loading = relation.getLoading() != null ? "load = " + relation.getLoading().toString() : "";
             String optional = relation.getOptional() ? "optional = true" : "";
-            relationBuilder = String.format(relationDefinition, insertable, updatable, fetchType, cascadeType, loading, optional);
+            relationBuilder = String.format(relationBuilder, relationDefinition, insertable, updatable, fetchType, cascadeType, loading, optional);
         }
 
         return relationBuilder;

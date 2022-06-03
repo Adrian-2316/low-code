@@ -24,20 +24,25 @@ public class JsonController {
         return DecipherDtoMapper.INSTANCE.toDto(save);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("{id}")
     public DecipherDto get(@PathVariable("id") String id) {
         return DecipherDtoMapper.INSTANCE.toDto(jsonPort.get(id));
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("{id}")
     public DecipherDto update(@PathVariable("id") String id, @RequestBody DecipherDto decipherDto) {
         Decipher update = jsonPort.update(id, DecipherDtoMapper.INSTANCE.toDomainModel(decipherDto));
         return DecipherDtoMapper.INSTANCE.toDto(update);
     }
 
-    @PatchMapping("/{id}")
+    @PatchMapping("{id}")
     public DecipherDto patch(@PathVariable("id") String id, @RequestBody DecipherDto decipherDto) {
         Decipher patch = jsonPort.patch(id, DecipherDtoMapper.INSTANCE.toDomainModel(decipherDto));
         return DecipherDtoMapper.INSTANCE.toDto(patch);
+    }
+
+    @DeleteMapping("{id}")
+    public void delete(@PathVariable("id") String id) {
+        jsonPort.delete(id);
     }
 }

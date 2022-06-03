@@ -7,14 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class LowcodeApplication {
     public static void main(String[] args) {
         SpringApplication.run(LowcodeApplication.class, args);
-        System.out.println(org.hibernate.Version.getVersionString());
-        System.out.println(org.hibernate.Version.getVersionString());
-        System.out.println(org.hibernate.Version.getVersionString());
-        System.out.println(org.hibernate.Version.getVersionString());
-        System.out.println(org.hibernate.Version.getVersionString());
-        System.out.println(org.hibernate.Version.getVersionString());
-        System.out.println(org.hibernate.Version.getVersionString());
-        System.out.println(org.hibernate.Version.getVersionString());
     }
 
 }

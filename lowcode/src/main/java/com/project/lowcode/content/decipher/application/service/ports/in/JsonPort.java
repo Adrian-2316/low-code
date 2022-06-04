@@ -11,4 +11,6 @@ public interface JsonPort {
     Decipher update(String id, Decipher toDomainModel);
 
     Decipher patch(String id, Decipher toDomainModel);
+
+    void delete(String id);
 }

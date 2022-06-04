@@ -37,4 +37,9 @@ public class JsonRepository implements JsonRepositoryPort {
         jsonJpaRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Json with id " + id + " not found"));
         return save(decipher);
     }
+
+    @Override
+    public void delete(String id) {
+        jsonJpaRepository.deleteById(id);
+    }
 }

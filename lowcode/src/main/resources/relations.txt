@@ -1,17 +1,46 @@
-@OneToOne(cascade = CascadeType.ALL)
+@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 @JoinColumn(name = "id_user", referencedColumnName = "id")
 private First first;
 
-@OneToOne(mappedBy = "first")
+@OneToOne(mappedBy = "first", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 private Second second;
 
-
-@ManyToOne()
-@JoinColumn(name = "id_first", referencedColumnName = "id")
+@ManyToOne(fetch = FetchType.LAZY)
+@JoinColumn(name = "id_first", referencedColumnName = "id", insertable = false, updatable = false)
 private First first;
 
-@OneToMany(mappedBy = "first")
+@OneToMany(mappedBy = "first", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 private Set<Second> second;
 
+@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+  @JoinTable(
+      name = "rel_first_second",
+      catalog = "",
+      schema = "",
+      joinColumns = @JoinColumn(name = "id_first"),
+      inverseJoinColumns = @JoinColumn(name = "id_second")
+private Set<First> first;
+
+
 @ManyToMany()
-private List<User> users1;
+private Set<Second> second;
+
+,
+    "relations": [
+      {
+        "firstEntity": "string",
+        "secondEntity": "string",
+        "targetEntity": "string",
+        "optional": true,
+        "loading": true,
+        "insertable": true,
+        "nullable": true,
+        "unique": true,
+        "orphanRemoval": true,
+
+        "updatable": true,
+        "fetchType": "LAZY",
+        "cascadeType": "ALL",
+        "relationType": "OneToOne"
+      }
+    ]

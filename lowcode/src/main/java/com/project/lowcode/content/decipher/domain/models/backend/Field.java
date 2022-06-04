@@ -10,10 +10,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Field {
     private String name;
-    private String precision;
-    private String scale;
+    private String columnDefinition;
     private String defaultValue;
+    private String table;
+    private Integer precision;
+    private Integer scale;
     private Integer length;
+    private Boolean insertable;
+    private Boolean updatable;
     private Boolean nullable;
     private Boolean unique;
     private Boolean autoIncrement;

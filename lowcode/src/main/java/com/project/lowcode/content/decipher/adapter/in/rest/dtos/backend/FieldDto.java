@@ -13,16 +13,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class FieldDto {
     private String name;
-    private String precision;
-    private String scale;
+    private String columnDefinition;
     private String defaultValue;
+    private String table;
+    private Integer precision;
+    private Integer scale;
     private Integer length;
+    private Boolean insertable = true;
+    private Boolean updatable = true;
+    private Boolean primaryKey = false;
+    private Boolean foreignKe = false;
     private Boolean nullable = false;
     private Boolean unique = false;
-    private Boolean autoIncrement;
-    private Boolean primaryKey;
-    private Boolean foreignKey;
-
+    private Boolean autoIncrement = false;
     @EnumValidator(
             enumClazz = Type.class,
             message = "Invalid value found in entity type")

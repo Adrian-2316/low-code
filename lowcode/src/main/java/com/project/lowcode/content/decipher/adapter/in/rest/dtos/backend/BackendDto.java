@@ -16,7 +16,7 @@ import java.util.List;
 public class BackendDto {
     @NotNull
     private String name;
-    @Valid
+
     private List<EntityDto> entity;
     @Valid
     private List<RelationsDto> relations;

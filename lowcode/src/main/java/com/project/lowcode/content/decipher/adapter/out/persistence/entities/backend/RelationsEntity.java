@@ -17,11 +17,16 @@ public class RelationsEntity {
     private String firstEntity;
     private String secondEntity;
     private String targetEntity;
-    private Boolean isFirstOwner;
+    private String referencedColumnName;
+    private String columnDefinition;
+    private String catalog;
+    private String schema;
+    private String table;
+    private Boolean nullable;
     private Boolean optional;
-    private Boolean loading;
     private Boolean insertable;
     private Boolean updatable;
+    private Boolean orphanRemoval;
     private FetchType fetchType;
     private CascadeType cascadeType;
     private RelationType relationType;

@@ -15,6 +15,8 @@ private Set<Second> second;
 @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
   @JoinTable(
       name = "rel_first_second",
+      catalog = "",
+      schema = "",
       joinColumns = @JoinColumn(name = "id_first"),
       inverseJoinColumns = @JoinColumn(name = "id_second")
 private Set<First> first;

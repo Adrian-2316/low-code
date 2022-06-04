@@ -24,13 +24,13 @@ public class DecipherService implements DecipherPort {
         buildFields(decipher);
     }
 
-    private void buildFields(Decipher decipher) throws IOException, IllegalAccessException {
+    private void buildFields(Decipher decipher) throws IOException {
         EntityUtil.addConstructorLines(decipher);
     }
 
     private void buildEntities(Decipher decipher) throws IOException {
         for (Entity entity : decipher.getBackend().getEntity()) {
-            EntityUtil.cloneModule(decipher.getBackend().getName(), entity.getName());
+            EntityUtil.cloneContent(decipher.getBackend().getName(), entity.getName());
             EntityUtil.replaceFolders(decipher.getBackend().getName(), entity.getName());
             EntityUtil.replaceFiles(decipher.getBackend().getName(), entity.getName());
         }

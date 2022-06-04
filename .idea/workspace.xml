@@ -5,19 +5,127 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="478564a0-803e-4b6a-9b11-531fb9401739" name="Changes" comment="Decipher update.">
+      <change afterPath="$PROJECT_DIR$/company/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/CompanyApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/adapter/in/rest/FirstController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/adapter/in/rest/dtos/FirstDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/adapter/in/rest/dtos/FirstDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/adapter/out/persistence/FirstJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/adapter/out/persistence/FirstRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/adapter/out/persistence/entity/FirstEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/adapter/out/persistence/entity/FirstEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/application/service/FirstService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/application/service/ports/in/FirstPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/application/service/ports/out/FirstRepositoryPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/domain/models/First.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/adapter/in/rest/TemplateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/adapter/in/rest/dtos/TemplateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/adapter/in/rest/dtos/TemplateDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/adapter/out/persistence/TemplateJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/adapter/out/persistence/TemplateRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/adapter/out/persistence/entity/TemplateEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/adapter/out/persistence/entity/TemplateEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/application/service/TemplateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/application/service/ports/in/TemplatePort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/application/service/ports/out/TemplateRepositoryPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/domain/models/Template.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/log/AsyncLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/log/RequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/log/RequestLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/log/streams/BufferedServletInputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/log/streams/TeeServletOutputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/log/wrappers/BufferedRequestWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/log/wrappers/BufferedResponseWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/swagger/SwaggerConfigurerNotLocal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/swagger/SwaggerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/validations/annotations/EnumValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/validations/constraints/EnumConstraint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/company/src/test/java/com/project/module/TemplateApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/BuilderUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/TemplateApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/content/template/adapter/in/rest/TemplateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/content/template/adapter/in/rest/dtos/TemplateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/content/template/adapter/in/rest/dtos/TemplateDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/content/template/adapter/out/persistence/TemplateJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/content/template/adapter/out/persistence/TemplateRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/content/template/adapter/out/persistence/entity/TemplateEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/content/template/adapter/out/persistence/entity/TemplateEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/content/template/application/service/TemplateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/content/template/application/service/ports/in/TemplatePort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/content/template/application/service/ports/out/TemplateRepositoryPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/content/template/domain/models/Template.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/log/AsyncLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/log/RequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/log/RequestLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/log/streams/BufferedServletInputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/log/streams/TeeServletOutputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/log/wrappers/BufferedRequestWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/log/wrappers/BufferedResponseWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/swagger/SwaggerConfigurerNotLocal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/swagger/SwaggerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/validations/annotations/EnumValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/java/com/project/module/validations/constraints/EnumConstraint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/test/java/com/project/module/TemplateApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/LowcodeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/LowcodeApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/DecipherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/DecipherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/JsonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/JsonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/JsonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/JsonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/FieldDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/FieldDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/RelationsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/RelationsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/entities/backend/FieldEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/entities/backend/FieldEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/entities/backend/RelationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/out/persistence/entities/backend/RelationsEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/DecipherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/DecipherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/JsonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/JsonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/EntityUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/EntityUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/ports/in/DecipherPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/ports/in/DecipherPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/ports/in/JsonPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/ports/in/JsonPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/ports/out/JsonRepositoryPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/ports/out/JsonRepositoryPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/ModuleUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/ModuleUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/domain/models/backend/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/domain/models/backend/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/domain/models/backend/Relations.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/domain/models/backend/Relations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/shared/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/shared/StringUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lowcode/src/main/resources/relations.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/resources/relations.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/TemplateApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/in/rest/TemplateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/in/rest/dtos/TemplateDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/in/rest/dtos/TemplateDtoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/out/persistence/TemplateJpaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/out/persistence/TemplateRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/out/persistence/entity/TemplateEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/adapter/out/persistence/entity/TemplateEntityMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/application/service/TemplateCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/application/service/TemplateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/application/service/ports/in/TemplatePort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/application/service/ports/out/TemplateMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/application/service/ports/out/TemplateRepositoryPort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/content/template/domain/models/Template.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/log/AsyncLogger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/log/RequestFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/log/RequestLogger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/log/streams/BufferedServletInputStream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/log/streams/TeeServletOutputStream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/log/wrappers/BufferedRequestWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/log/wrappers/BufferedResponseWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/swagger/SwaggerConfigurerNotLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/swagger/SwaggerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/validations/annotations/EnumValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/java/com/project/template/validations/constraints/EnumConstraint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/src/test/java/com/project/template/TemplateApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/template.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +204,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/adri9/IdeaProjects/lowcode-project/company/pom.xml",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.project.lowcode.content.generator.adapter.in.rest" />
@@ -116,11 +232,11 @@
       <recent name="com.project.template.content.template.application.ports" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.project.lowcode.content.decipher.application.service.logic" />
       <recent name="com.project.lowcode.content.decipher.adapter.in.rest.dtos.backend" />
       <recent name="com.project.lowcode.content.decipher.domain.models.backend" />
       <recent name="com.project.lowcode.shared" />
       <recent name="com.project.lowcode.content.decipher.adapter.out.persistence.entities.backend" />
-      <recent name="com.project.lowcode.content.decipher.application.service.ports.out" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -146,7 +262,7 @@
     </configuration>
     <configuration name="Template" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.project.template.TemplateApplication" />
-      <module name="template" />
+      <module name="module" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -312,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654127047376</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Decipher update.&#10;Generator update.&#10;Logs added.">
+      <created>1654212669383</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1654212669383</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,14 +472,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/FileUtil.java</url>
-          <line>175</line>
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/FileUtil.java</url>
-          <line>184</line>
-          <option name="timeStamp" value="84" />
+          <url>file://$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/ModuleUtil.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="115" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

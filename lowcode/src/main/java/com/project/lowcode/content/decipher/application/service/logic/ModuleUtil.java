@@ -13,7 +13,7 @@ import java.util.Map;
 public class ModuleUtil {
     public static void cloneModule(String name)
             throws IOException {
-        String sourceDirectoryLocation = "../template";
+        String sourceDirectoryLocation = "../module";
         String destinationDirectoryLocation = "../" + StringUtils.toLowerCamelCase(name);
         File sourceDirectory = new File(sourceDirectoryLocation);
         File destinationDirectory = new File(destinationDirectoryLocation);
@@ -30,7 +30,7 @@ public class ModuleUtil {
 
         for (String file : fileList) {
             File fileToBeModified = new File(currentDirectoryLocation + file);
-            FileUtil.replaceText(name, fileToBeModified);
+            FileUtil.replaceText(name, fileToBeModified, "module");
         }
     }
 
@@ -45,7 +45,7 @@ public class ModuleUtil {
         name = StringUtils.toLowerCamelCase(name);
         String upperCamelCaseName = StringUtils.toUpperCamelCase(name);
         LinkedHashMap<String, String> folderMap = new LinkedHashMap<>();
-        folderMap.put("../" + name + "/src/main/java/com/project/template", "../" + name + "/src/main/java/com/project/" + name);
+        folderMap.put("../" + name + "/src/main/java/com/project/module", "../" + name + "/src/main/java/com/project/" + name);
         folderMap.put("../" + name + "/src/main/java/com/project/" + name + "/TemplateApplication.java", "../" + name + "/src/main/java/com/project/" + name + "/" + upperCamelCaseName + "Application.java");
         for (Map.Entry<String, String> entry : folderMap.entrySet()) {
             File folderToBeModified = new File(entry.getKey());

@@ -13,10 +13,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class FieldEntity {
     private String name;
+    private String columnDefinition;
+    private String defaultValue;
+    private String table;
     private Integer precision;
     private Integer scale;
-    private String defaultValue;
     private Integer length;
+    private Boolean insertable;
+    private Boolean updatable;
     private Boolean nullable;
     private Boolean unique;
     private Boolean autoIncrement;

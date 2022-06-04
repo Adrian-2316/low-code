@@ -31,11 +31,9 @@ public class EntityUtil {
 
         // Application
         routePath = "/application/service/";
-        fileList.add(routePath + name + "Command.java");
         fileList.add(routePath + name + "Service.java");
         fileList.add(routePath + "ports/in/" + name + "Port.java");
         fileList.add(routePath + "ports/out/" + name + "RepositoryPort.java");
-        fileList.add(routePath + "ports/out/" + name + "Mapper.java");
 
         // Domain
         routePath = "/domain/models/";
@@ -43,7 +41,7 @@ public class EntityUtil {
 
         for (String file : fileList) {
             File fileToBeModified = new File(currentDirectoryLocation + file);
-            FileUtil.replaceText(StringUtils.toLowerCamelCase(name), fileToBeModified);
+            FileUtil.replaceText(StringUtils.toLowerCamelCase(name), fileToBeModified, "template");
         }
     }
 
@@ -77,10 +75,8 @@ public class EntityUtil {
 
         // Application
         routePath = "/application/service/";
-        folderMap.put(entityPath + routePath + "TemplateCommand.java", entityPath + routePath + upperName + "Command.java");
         folderMap.put(entityPath + routePath + "TemplateService.java", entityPath + routePath + upperName + "Service.java");
         folderMap.put(entityPath + routePath + "ports/in/TemplatePort.java", entityPath + routePath + "ports/in/" + upperName + "Port.java");
-        folderMap.put(entityPath + routePath + "ports/out/TemplateMapper.java", entityPath + routePath + "ports/out/" + upperName + "Mapper.java");
         folderMap.put(entityPath + routePath + "ports/out/TemplateRepositoryPort.java", entityPath + routePath + "ports/out/" + upperName + "RepositoryPort.java");
 
         // Domain
@@ -94,7 +90,7 @@ public class EntityUtil {
     }
 
 
-    public static void cloneModule(String module, String name) throws IOException {
+    public static void cloneContent(String module, String name) throws IOException {
         module = StringUtils.toLowerCamelCase(module);
         String sourceDirectoryLocation = "../" + module + "/src/main/java/com/project/" + module + "/content/template";
         String destinationDirectoryLocation = "../" + module + "/src/main/java/com/project/" + module + "/content/" + StringUtils.toLowerCamelCase(name);
@@ -105,7 +101,7 @@ public class EntityUtil {
         }
     }
 
-    public static void addConstructorLines(Decipher decipher) throws IOException, IllegalAccessException {
+    public static void addConstructorLines(Decipher decipher) throws IOException {
         for (Entity entity : decipher.getBackend().getEntity()) {
             List<File> files = getTemplateFiles(StringUtils.toLowerCamelCase(decipher.getBackend().getName()), StringUtils.toUpperCamelCase(entity.getName()));
             FileUtil.removeConstructorLines(files);
@@ -118,7 +114,6 @@ public class EntityUtil {
         String routePath = "../" + module + "/src/main/java/com/project/" + module + "/content/" + entityName;
         files.add(new File(routePath + "/adapter/in/rest/dtos/" + entityName + "Dto.java"));
         files.add(new File(routePath + "/adapter/out/persistence/entity/" + entityName + "Entity.java"));
-        files.add(new File(routePath + "/application/service/" + entityName + "Command.java"));
         files.add(new File(routePath + "/domain/models/" + entityName + ".java"));
         return files;
     }

@@ -19,10 +19,16 @@ public class RelationsDto {
     private String firstEntity;
     private String secondEntity;
     private String targetEntity;
-    private Boolean optional;
-    private Boolean loading;
-    private Boolean insertable;
-    private Boolean updatable;
+    private String referencedColumnName;
+    private String columnDefinition;
+    private String catalog;
+    private String schema;
+    private String table;
+    private Boolean nullable = true;
+    private Boolean optional = false;
+    private Boolean insertable = true;
+    private Boolean updatable = true;
+    private Boolean orphanRemoval = false;
     @EnumValidator(
             enumClazz = FetchType.class,
             message = "Invalid value found for FetchType")

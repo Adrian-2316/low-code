@@ -24,10 +24,24 @@ public class DecipherService implements DecipherPort {
         buildFields(decipher);
     }
 
-    private void buildFields(Decipher decipher) throws IOException {
-        EntityUtil.addConstructorLines(decipher);
+    /**
+     * Main build module method
+     *
+     * @param decipher - Decipher entity
+     * @throws IOException - IOException
+     */
+    private void buildModule(Decipher decipher) throws IOException {
+        ModuleUtil.cloneModule(decipher.getBackend().getName());
+        ModuleUtil.replaceFolders(decipher.getBackend().getName());
+        ModuleUtil.replaceFiles(decipher.getBackend().getName());
     }
 
+    /**
+     * Main build entities method
+     *
+     * @param decipher - Decipher entity
+     * @throws IOException - IOException
+     */
     private void buildEntities(Decipher decipher) throws IOException {
         for (Entity entity : decipher.getBackend().getEntity()) {
             EntityUtil.cloneContent(decipher.getBackend().getName(), entity.getName());
@@ -36,9 +50,13 @@ public class DecipherService implements DecipherPort {
         }
     }
 
-    private void buildModule(Decipher decipher) throws IOException {
-        ModuleUtil.cloneModule(decipher.getBackend().getName());
-        ModuleUtil.replaceFolders(decipher.getBackend().getName());
-        ModuleUtil.replaceFiles(decipher.getBackend().getName());
+    /**
+     * Main build fields method
+     *
+     * @param decipher - Decipher entity
+     * @throws IOException - IOException
+     */
+    private void buildFields(Decipher decipher) throws IOException {
+        EntityUtil.addConstructorLines(decipher);
     }
 }

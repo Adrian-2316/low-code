@@ -30,7 +30,7 @@ public class ModuleUtil {
 
         for (String file : fileList) {
             File fileToBeModified = new File(currentDirectoryLocation + file);
-            FileUtil.replaceText(name, fileToBeModified, "module");
+            FileUtil.replaceText(fileToBeModified, "module", name);
         }
     }
 

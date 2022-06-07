@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="478564a0-803e-4b6a-9b11-531fb9401739" name="Changes" comment="Decipher update.">
+    <list default="true" id="478564a0-803e-4b6a-9b11-531fb9401739" name="Changes" comment="Decipher update.&#10;Builder update.&#10;Entity update.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/BuilderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/BuilderUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/EntityUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/EntityUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/shared/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/shared/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/resources/sample.json" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/resources/sample.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654212669383</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Decipher update.&#10;Builder update.&#10;Entity update.">
+      <created>1654598425813</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1654598425813</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +358,8 @@
     <MESSAGE value="Decipher update.&#10;ReadMe update." />
     <MESSAGE value="Decipher update.&#10;Generator update.&#10;Logs added." />
     <MESSAGE value="Decipher update." />
-    <option name="LAST_COMMIT_MESSAGE" value="Decipher update." />
+    <MESSAGE value="Decipher update.&#10;Builder update.&#10;Entity update." />
+    <option name="LAST_COMMIT_MESSAGE" value="Decipher update.&#10;Builder update.&#10;Entity update." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

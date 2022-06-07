@@ -41,7 +41,8 @@ public class EntityUtil {
 
         for (String file : fileList) {
             File fileToBeModified = new File(currentDirectoryLocation + file);
-            FileUtil.replaceText(StringUtils.toLowerCamelCase(name), fileToBeModified, "template");
+            FileUtil.replaceText(fileToBeModified, "template", StringUtils.toLowerCamelCase(name));
+            FileUtil.replaceText(fileToBeModified, "module", StringUtils.toLowerCamelCase(module));
         }
     }
 

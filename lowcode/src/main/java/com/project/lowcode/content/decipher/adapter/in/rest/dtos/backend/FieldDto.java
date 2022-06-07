@@ -22,7 +22,7 @@ public class FieldDto {
     private Boolean insertable = true;
     private Boolean updatable = true;
     private Boolean primaryKey = false;
-    private Boolean foreignKe = false;
+    private Boolean foreignKey = false;
     private Boolean nullable = false;
     private Boolean unique = false;
     private Boolean autoIncrement = false;

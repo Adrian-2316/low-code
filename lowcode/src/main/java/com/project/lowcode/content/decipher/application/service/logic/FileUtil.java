@@ -23,15 +23,15 @@ public class FileUtil {
     /**
      * Replaces the template text in the provided file with the input String.
      *
-     * @param newString        - The replaced text.
+     * @param newString        - The new string to replace.
      * @param fileToBeModified - The file to be modified.
-     * @param keyword          - The keyword to be replaced.
+     * @param oldString        - The old string to be replaced.
      * @throws IOException - If the file cannot be read or written.
      */
-    public static void replaceText(String newString, File fileToBeModified, String keyword) throws IOException {
+    public static void replaceText(File fileToBeModified, String oldString, String newString) throws IOException {
         String data = FileUtils.readFileToString(fileToBeModified, "UTF-8");
-        data = data.replace(keyword.toLowerCase(), StringUtils.toLowerCamelCase(newString));
-        data = data.replace(StringUtils.toUpperCamelCase(keyword), StringUtils.toUpperCamelCase(newString));
+        data = data.replace(oldString.toLowerCase(), StringUtils.toLowerCamelCase(newString));
+        data = data.replace(StringUtils.toUpperCamelCase(oldString), StringUtils.toUpperCamelCase(newString));
         FileWriter writer = new FileWriter(fileToBeModified);
         writer.write(data);
         Objects.requireNonNull(writer).close();

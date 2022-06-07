@@ -1,9 +1,13 @@
 package com.project.lowcode.content.decipher.application.service.logic;
 
+import com.project.lowcode.content.decipher.domain.models.Decipher;
+import com.project.lowcode.content.decipher.domain.models.backend.Entity;
 import com.project.lowcode.content.decipher.domain.models.backend.Field;
 import com.project.lowcode.content.decipher.domain.models.backend.Relations;
 import com.project.lowcode.shared.RelationType;
 import com.project.lowcode.shared.StringUtils;
+
+import java.io.File;
 
 public class BuilderUtil {
 
@@ -75,14 +79,10 @@ public class BuilderUtil {
         String orphanRemoval = relation.getOrphanRemoval() ? ", orphanRemoval = true" : "";
         String optional = !relation.getOptional() ? ", optional = false" : "";
         return switch (relation.getRelationType()) {
-            case OneToOne ->
-                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, optional));
-            case OneToMany ->
-                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, ""));
-            case ManyToOne ->
-                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, optional, "", ""));
-            case ManyToMany ->
-                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, mappedBy, "", ""));
+            case OneToOne -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, optional));
+            case OneToMany -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, ""));
+            case ManyToOne -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, optional, "", ""));
+            case ManyToMany -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, mappedBy, "", ""));
         };
 
     }
@@ -112,5 +112,21 @@ public class BuilderUtil {
         String nullable = relation.getNullable() ? "" : ",nullable = false";
         String referencedColumnName = relation.getReferencedColumnName() != null ? ",referencedColumnName = \"" + relation.getReferencedColumnName() + "\"" : "";
         return String.format(joinColumn, name, referencedColumnName, columnDefinition, insertable, updatable, table, nullable);
+    }
+
+    public static String buildFieldImports(Field field) {
+        return "\timport java.util." + field.getType() + ";\n";
+    }
+
+
+    public static String buildRelationImports(Relations relation, Decipher decipher, File file, Entity entity) {
+        /*if (file.getName().endsWith("Entity.java")) {
+            String imports = "\timport com.project." + decipher.getBackend().getName() + ".content." + decipher.getBackend().getEntity() + "." + StringUtils.toUpperCamelCase(entity.getName()) + "Entity;\n";
+        } else if (file.getName().endsWith("Dto.java")) {
+            String imports = "\timport com.project." + decipher.getBackend().getName() + ".content." + decipher.getBackend().getEntity() + "." + StringUtils.toUpperCamelCase(entity.getName()) + "Dto;\n";
+        } else {
+            String imports = "\timport com.project." + decipher.getBackend().getName() + ".content." + decipher.getBackend().getEntity() + "." + StringUtils.toUpperCamelCase(entity.getName()) + ";\n";
+        }*/
+        return "";
     }
 }

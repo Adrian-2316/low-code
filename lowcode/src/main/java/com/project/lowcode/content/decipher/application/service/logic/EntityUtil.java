@@ -105,7 +105,7 @@ public class EntityUtil {
         for (Entity entity : decipher.getBackend().getEntity()) {
             List<File> files = getTemplateFiles(StringUtils.toLowerCamelCase(decipher.getBackend().getName()), StringUtils.toUpperCamelCase(entity.getName()));
             FileUtil.removeConstructorLines(files);
-            FileUtil.addConstructorLines(entity, decipher.getBackend().getRelations(), files);
+            FileUtil.addConstructorLines(entity, decipher, files);
         }
     }
 

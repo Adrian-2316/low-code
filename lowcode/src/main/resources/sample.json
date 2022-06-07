@@ -8,8 +8,8 @@
         "fields": [
           {
             "name": "string",
-            "precision": "string",
-            "scale": "string",
+            "precision": 0,
+            "scale": 0,
             "defaultValue": "string",
             "length": 0,
             "nullable": true,

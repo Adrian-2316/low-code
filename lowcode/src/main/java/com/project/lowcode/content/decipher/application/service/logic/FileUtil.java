@@ -1,5 +1,6 @@
 package com.project.lowcode.content.decipher.application.service.logic;
 
+import com.project.lowcode.content.decipher.domain.models.Decipher;
 import com.project.lowcode.content.decipher.domain.models.backend.Entity;
 import com.project.lowcode.content.decipher.domain.models.backend.Field;
 import com.project.lowcode.content.decipher.domain.models.backend.Relations;
@@ -15,6 +16,9 @@ import java.util.Objects;
 public class FileUtil {
     public static String GENERATION_CODE_SEGMENT_START = "    // Generation code segment start";
     public static String GENERATION_CODE_SEGMENT_END = "    // Generation code segment end";
+    public static String GENERATION_IMPORT_CODE_START = "// Generation import code segment start";
+    public static String GENERATION_IMPORT_CODE_END = "// Generation import code segment end";
+
 
     /**
      * Replaces the template text in the provided file with the input String.
@@ -42,6 +46,11 @@ public class FileUtil {
     public static void removeConstructorLines(List<File> files) throws IOException {
         for (File file : files) {
             List<String> lines = FileUtils.readLines(file, "UTF-8");
+            if (lines.contains(GENERATION_IMPORT_CODE_START)) {
+                int start = lines.indexOf(GENERATION_IMPORT_CODE_START) + 1;
+                int end = lines.indexOf(GENERATION_IMPORT_CODE_END);
+                lines.subList(start, end).clear();
+            }
             if (lines.contains(GENERATION_CODE_SEGMENT_START)) {
                 int start = lines.indexOf(GENERATION_CODE_SEGMENT_START) + 1;
                 int end = lines.indexOf(GENERATION_CODE_SEGMENT_END);
@@ -54,22 +63,31 @@ public class FileUtil {
     /**
      * Method to add all fields in classes.
      *
-     * @param files     - List of files to be modified
-     * @param entity    - Entity
-     * @param relations - Relations
+     * @param files    - List of files to be modified
+     * @param entity   - Entity
+     * @param decipher - Decipher entity
      * @throws IOException - IOException
      */
-    public static void addConstructorLines(Entity entity, List<Relations> relations, List<File> files) throws IOException {
+    public static void addConstructorLines(Entity entity, Decipher decipher, List<File> files) throws IOException {
         for (File file : files) {
             List<String> lines = FileUtils.readLines(file, "UTF-8");
-            if (!lines.contains(GENERATION_CODE_SEGMENT_START)) continue;
+            if (!lines.contains(GENERATION_CODE_SEGMENT_START) || !lines.contains(GENERATION_IMPORT_CODE_START))
+                continue;
 
-            // Add fields to constructor
+            addImports(entity, decipher, file, lines, lines.indexOf(GENERATION_IMPORT_CODE_START) + 1);
             addFields(entity, file, lines, lines.indexOf(GENERATION_CODE_SEGMENT_START) + 1);
-            // Add relations to constructor
-            addRelations(entity, relations, file, lines, lines.indexOf(GENERATION_CODE_SEGMENT_START) + 1);
+            addRelations(entity, decipher.getBackend().getRelations(), file, lines, lines.indexOf(GENERATION_CODE_SEGMENT_START) + 1);
 
             FileUtils.writeLines(file, "UTF-8", lines);
+        }
+    }
+
+    private static void addImports(Entity entity, Decipher decipher, File file, List<String> lines, int index) {
+        for (Field field : entity.getFields()) {
+            lines.add(index++, BuilderUtil.buildFieldImports(field));
+        }
+        for (Relations relation : decipher.getBackend().getRelations()) {
+            lines.add(index++, BuilderUtil.buildRelationImports(relation, decipher, file, entity));
         }
     }
 
@@ -93,7 +111,6 @@ public class FileUtil {
             }
         }
     }
-
 
     /**
      * Method used to rename a folder.

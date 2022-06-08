@@ -95,7 +95,7 @@ public class FieldConstraint implements ConstraintValidator<FieldValidator, Fiel
      * @return boolean depending on if field type List params are valid
      */
     private boolean checkTypeDouble(Field field) {
-        if (field.getType().equals(Type.Integer)
+        if (field.getType().equals(Type.Double)
                 && ((field.getLength() != null)
                 || (field.getScale() != null)
                 || (field.getPrecision() != null))) {

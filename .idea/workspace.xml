@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="478564a0-803e-4b6a-9b11-531fb9401739" name="Changes" comment="Decipher update.">
-      <change afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/validations/annotations/FieldValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/validations/constraints/FieldConstraint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="478564a0-803e-4b6a-9b11-531fb9401739" name="Changes" comment="Field validations">
+      <change afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/validations/annotations/EntitiyValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/validations/constraints/EntitiyConstraint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/EntityDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/adapter/in/rest/dtos/backend/EntityDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/validations/constraints/FieldConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/validations/constraints/FieldConstraint.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +48,29 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="fieldValidations" />
+                    <option name="lastUsedInstant" value="1654677976" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1654677975" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
@@ -323,12 +345,12 @@
       <option name="project" value="LOCAL" />
       <updated>1654212669383</updated>
     </task>
-    <task id="LOCAL-00019" summary="Decipher update.&#10;Builder update.&#10;Entity update.">
-      <created>1654598425813</created>
+    <task id="LOCAL-00019" summary="Field validations">
+      <created>1654678684975</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1654598425813</updated>
+      <updated>1654678684975</updated>
     </task>
     <task id="LOCAL-00020" summary="Pom update.">
       <created>1654601426335</created>
@@ -337,7 +359,7 @@
       <option name="project" value="LOCAL" />
       <updated>1654601426335</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +391,8 @@
     <MESSAGE value="Decipher update.&#10;Generator update.&#10;Logs added." />
     <MESSAGE value="Decipher update." />
     <MESSAGE value="Decipher update.&#10;Builder update.&#10;Entity update." />
-    <option name="LAST_COMMIT_MESSAGE" value="Decipher update.&#10;Builder update.&#10;Entity update." />
+    <MESSAGE value="Field validations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Field validations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

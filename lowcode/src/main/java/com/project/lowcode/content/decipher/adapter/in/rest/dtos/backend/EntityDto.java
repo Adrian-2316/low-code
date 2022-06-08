@@ -1,11 +1,11 @@
 package com.project.lowcode.content.decipher.adapter.in.rest.dtos.backend;
 
+import com.project.lowcode.validations.annotations.FieldValidator;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
@@ -16,6 +16,6 @@ import java.util.List;
 public class EntityDto {
     @NotNull
     private String name;
-    @Valid
+    @FieldValidator
     private List<FieldDto> fields;
 }

@@ -19,23 +19,21 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
         </processorPath>
-        <module name="decipher" />
         <module name="lowcode" />
         <module name="module" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8">
       <module name="company" target="17" />
-      <module name="decipher" target="17" />
       <module name="lowcode" target="17" />
       <module name="module" target="17" />
       <module name="project" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
+    <option name="PREFER_TARGET_JDK_COMPILER" value="false" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="company" options="-parameters -Amapstruct.defaultComponentModel=spring" />
-      <module name="decipher" options="-parameters -Amapstruct.defaultComponentModel=spring" />
       <module name="lowcode" options="-parameters -Amapstruct.defaultComponentModel=spring" />
       <module name="module" options="-parameters -Amapstruct.defaultComponentModel=spring" />
       <module name="project" options="-parameters -Amapstruct.defaultComponentModel=spring" />

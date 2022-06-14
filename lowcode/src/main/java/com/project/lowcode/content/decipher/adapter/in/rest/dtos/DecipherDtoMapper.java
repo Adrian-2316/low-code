@@ -11,4 +11,5 @@ public interface DecipherDtoMapper {
     DecipherDto toDto(Decipher decipher);
 
     Decipher toDomainModel(DecipherDto decipherDto);
+
 }

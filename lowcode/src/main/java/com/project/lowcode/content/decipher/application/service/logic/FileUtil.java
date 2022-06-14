@@ -19,7 +19,6 @@ public class FileUtil {
     public static String GENERATION_IMPORT_CODE_START = "// Generation import code segment start";
     public static String GENERATION_IMPORT_CODE_END = "// Generation import code segment end";
 
-
     /**
      * Replaces the template text in the provided file with the input String.
      *

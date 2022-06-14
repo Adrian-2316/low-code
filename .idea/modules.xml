@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/decipher/decipher.iml" filepath="$PROJECT_DIR$/decipher/decipher.iml" />
       <module fileurl="file://$PROJECT_DIR$/lowcode/lowcode.iml" filepath="$PROJECT_DIR$/lowcode/lowcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/module/module.iml" filepath="$PROJECT_DIR$/module/module.iml" />
       <module fileurl="file://$PROJECT_DIR$/project.iml" filepath="$PROJECT_DIR$/project.iml" />

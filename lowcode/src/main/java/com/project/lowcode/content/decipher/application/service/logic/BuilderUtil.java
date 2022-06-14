@@ -79,10 +79,14 @@ public class BuilderUtil {
         String orphanRemoval = relation.getOrphanRemoval() ? ", orphanRemoval = true" : "";
         String optional = !relation.getOptional() ? ", optional = false" : "";
         return switch (relation.getRelationType()) {
-            case OneToOne -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, optional));
-            case OneToMany -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, ""));
-            case ManyToOne -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, optional, "", ""));
-            case ManyToMany -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, mappedBy, "", ""));
+            case OneToOne ->
+                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, optional));
+            case OneToMany ->
+                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, ""));
+            case ManyToOne ->
+                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, optional, "", ""));
+            case ManyToMany ->
+                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, mappedBy, "", ""));
         };
 
     }

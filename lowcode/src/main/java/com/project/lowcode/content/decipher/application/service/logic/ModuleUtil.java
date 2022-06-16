@@ -27,7 +27,18 @@ public class ModuleUtil {
         List<String> fileList = new ArrayList<>();
         fileList.add("/pom.xml");
         fileList.add("/src/main/resources/application.properties");
-
+        fileList.add("/src/main/java/com/project/" + StringUtils.toLowerCamelCase(name) + "/" + StringUtils.toUpperCamelCase(name) + "Application.java");
+        fileList.add("/src/main/java/com/project/" + StringUtils.toLowerCamelCase(name) + "/swagger/SwaggerConfigurerNotLocal.java");
+        fileList.add("/src/main/java/com/project/" + StringUtils.toLowerCamelCase(name) + "/swagger/SwaggerController.java");
+        fileList.add("/src/main/java/com/project/" + StringUtils.toLowerCamelCase(name) + "/validations/annotations/EnumValidator.java");
+        fileList.add("/src/main/java/com/project/" + StringUtils.toLowerCamelCase(name) + "/validations/constraints/EnumConstraint.java");
+        fileList.add("/src/main/java/com/project/" + StringUtils.toLowerCamelCase(name) + "/log/streams/BufferedServletInputStream.java");
+        fileList.add("/src/main/java/com/project/" + StringUtils.toLowerCamelCase(name) + "/log/streams/TeeServletOutputStream.java");
+        fileList.add("/src/main/java/com/project/" + StringUtils.toLowerCamelCase(name) + "/log/wrappers/BufferedRequestWrapper.java");
+        fileList.add("/src/main/java/com/project/" + StringUtils.toLowerCamelCase(name) + "/log/wrappers/BufferedResponseWrapper.java");
+        fileList.add("/src/main/java/com/project/" + StringUtils.toLowerCamelCase(name) + "/log/AsyncLogger.java");
+        fileList.add("/src/main/java/com/project/" + StringUtils.toLowerCamelCase(name) + "/log/RequestFilter.java");
+        fileList.add("/src/main/java/com/project/" + StringUtils.toLowerCamelCase(name) + "/log/RequestLogger.java");
         for (String file : fileList) {
             File fileToBeModified = new File(currentDirectoryLocation + file);
             FileUtil.replaceText(fileToBeModified, "module", name);
@@ -46,7 +57,7 @@ public class ModuleUtil {
         String upperCamelCaseName = StringUtils.toUpperCamelCase(name);
         LinkedHashMap<String, String> folderMap = new LinkedHashMap<>();
         folderMap.put("../" + name + "/src/main/java/com/project/module", "../" + name + "/src/main/java/com/project/" + name);
-        folderMap.put("../" + name + "/src/main/java/com/project/" + name + "/TemplateApplication.java", "../" + name + "/src/main/java/com/project/" + name + "/" + upperCamelCaseName + "Application.java");
+        folderMap.put("../" + name + "/src/main/java/com/project/" + name + "/ModuleApplication.java", "../" + name + "/src/main/java/com/project/" + name + "/" + upperCamelCaseName + "Application.java");
         for (Map.Entry<String, String> entry : folderMap.entrySet()) {
             File folderToBeModified = new File(entry.getKey());
             FileUtil.renameFolder(folderToBeModified, new File(entry.getValue()));

@@ -1,5 +1,9 @@
 package com.project.module.content.template.domain.models;
 
+
+// Generation import code segment start
+// Generation import code segment end
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -29,7 +29,7 @@ public class JsonRepository implements JsonRepositoryPort {
         JsonEntity jsonEntity = JsonEntityMapper.INSTANCE.toEntity(decipher);
         JsonEntity savedJsonEntity = jsonJpaRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Json with id " + id + " not found"));
         JsonEntityMapper.INSTANCE.partialUpdate(jsonEntity, savedJsonEntity);
-        return JsonEntityMapper.INSTANCE.toDomainModel(jsonJpaRepository.save(jsonEntity));
+        return JsonEntityMapper.INSTANCE.toDomainModel(jsonJpaRepository.save(savedJsonEntity));
     }
 
     @Override

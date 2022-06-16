@@ -9,6 +9,7 @@ public interface JsonEntityMapper {
     JsonEntityMapper INSTANCE = Mappers.getMapper(JsonEntityMapper.class);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE, nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS)
+    @Mapping(target = "id", ignore = true)
     void partialUpdate(JsonEntity newJson
             , @MappingTarget JsonEntity jsonEntity);
 

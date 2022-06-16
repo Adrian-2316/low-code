@@ -81,10 +81,14 @@ public class BuilderUtil {
         String orphanRemoval = relation.getOrphanRemoval() ? ", orphanRemoval = true" : "";
         String optional = !relation.getOptional() ? ", optional = false" : "";
         return switch (relation.getRelationType()) {
-            case OneToOne -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, optional));
-            case OneToMany -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, ""));
-            case ManyToOne -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, optional, "", ""));
-            case ManyToMany -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, mappedBy, "", ""));
+            case OneToOne ->
+                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, optional));
+            case OneToMany ->
+                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, ""));
+            case ManyToOne ->
+                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, optional, "", ""));
+            case ManyToMany ->
+                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, mappedBy, "", ""));
         };
 
     }
@@ -127,16 +131,16 @@ public class BuilderUtil {
         List<Type> types = fields.stream().map(Field::getType).toList();
         String line = "";
         if (checkJavaUtilImports(types)) {
-            line += "\timport java.util.*;\n";
+            line += "import java.util.*;\n";
         }
         if (types.contains(Type.BigInteger) || types.contains(Type.BigDecimal)) {
-            line += "\timport java.math.*;\n";
+            line += "import java.math.*;\n";
         }
         if (types.contains(Type.Time)) {
-            line += "\timport java.sql.Time;\n";
+            line += "import java.sql.Time;\n";
         }
         if (types.contains(Type.DateTime)) {
-            line += "\timport com.google.api.client.util.DateTime;\n";
+            line += "import com.google.api.client.util.DateTime;\n";
         }
 
         return line;
@@ -187,12 +191,12 @@ public class BuilderUtil {
             relationTarget = relations.getSecondEntity();
         }
         if (file.getName().endsWith("Entity.java")) {
-            return "import com.project." + decipher.getBackend().getName() + ".content." + relationFrom + ".adapter.out.persistence.entity" + StringUtils.toUpperCamelCase(relationTarget) + "Entity;\n";
+            return "import com.project." + decipher.getBackend().getName() + ".content." + relationTarget + ".adapter.out.persistence.entity." + StringUtils.toUpperCamelCase(relationTarget) + "Entity;\n";
         }
         if (file.getName().endsWith("Dto.java")) {
-            return "import com.project." + decipher.getBackend().getName() + ".content." + relationFrom + ".adapter.in.rest.dtos." + StringUtils.toUpperCamelCase(relationTarget) + "Dto;\n";
+            return "import com.project." + decipher.getBackend().getName() + ".content." + relationTarget + ".adapter.in.rest.dtos." + StringUtils.toUpperCamelCase(relationTarget) + "Dto;\n";
         }
-        return "import com.project." + decipher.getBackend().getName() + ".content." + relationFrom + ".domain.models." + StringUtils.toUpperCamelCase(relationTarget) + ";\n";
+        return "import com.project." + decipher.getBackend().getName() + ".content." + relationTarget + ".domain.models." + StringUtils.toUpperCamelCase(relationTarget) + ";\n";
 
     }
 }

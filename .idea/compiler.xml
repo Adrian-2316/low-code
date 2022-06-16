@@ -4,11 +4,6 @@
     <option name="USE_RELEASE_OPTION" value="false" />
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-      </profile>
       <profile name="Annotation profile for project" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -27,7 +22,7 @@
       <module name="company" target="17" />
       <module name="lowcode" target="17" />
       <module name="module" target="17" />
-      <module name="project" target="1.5" />
+      <module name="project" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

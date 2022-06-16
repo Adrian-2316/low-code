@@ -15,6 +15,7 @@ import java.util.Map;
 public class EntityUtil {
     public static void replaceFiles(String module, String name) throws IOException {
         name = StringUtils.toUpperCamelCase(name);
+        module = StringUtils.toLowerCamelCase(module);
         String currentDirectoryLocation = "./" + module + "/src/main/java/com/project/" + module + "/content/" + StringUtils.toLowerCamelCase(name);
         List<String> fileList = new ArrayList<>();
 
@@ -112,7 +113,8 @@ public class EntityUtil {
 
     private static List<File> getTemplateFiles(String module, String entityName) {
         List<File> files = new ArrayList<>();
-        String routePath = "./" + module + "/src/main/java/com/project/" + module + "/content/" + entityName;
+
+        String routePath = "./" + module + "/src/main/java/com/project/" + module + "/content/" + StringUtils.toLowerCamelCase(entityName);
         files.add(new File(routePath + "/adapter/in/rest/dtos/" + entityName + "Dto.java"));
         files.add(new File(routePath + "/adapter/out/persistence/entity/" + entityName + "Entity.java"));
         files.add(new File(routePath + "/domain/models/" + entityName + ".java"));

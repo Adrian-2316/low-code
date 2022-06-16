@@ -14,6 +14,7 @@ public class ModuleUtil {
     public static void cloneModule(String name)
             throws IOException {
         String sourceDirectoryLocation = "./module";
+        System.out.println("Working Directory = " + System.getProperty("user.dir"));
         String destinationDirectoryLocation = "./" + StringUtils.toLowerCamelCase(name);
         File sourceDirectory = new File(sourceDirectoryLocation);
         File destinationDirectory = new File(destinationDirectoryLocation);
@@ -23,7 +24,7 @@ public class ModuleUtil {
     }
 
     public static void replaceFiles(String name) throws IOException {
-        String currentDirectoryLocation = "./" + name;
+        String currentDirectoryLocation = "./" + StringUtils.toLowerCamelCase(name);
         List<String> fileList = new ArrayList<>();
         fileList.add("/pom.xml");
         fileList.add("/src/main/resources/application.properties");

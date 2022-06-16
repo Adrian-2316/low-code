@@ -5,7 +5,7 @@ services:
     image: lowcode
     build:
       context: ""
-      dockerfile: ./Dockerfile_debug
+      dockerfile: ../Dockerfile_debug
     expose:
       - 8086
     ports:
@@ -15,7 +15,7 @@ services:
     restart: always
     command: java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:8080 -Djava.security.egd=file:/dev/./urandom -jar /usr/local/lib/lowcode.jar
     environment:
-      SERVICE_NAME: bonificaciones
+      SERVICE_NAME: lowcode
       PROFILE: ${PROFILE}
 networks:
   spring:

@@ -15,7 +15,7 @@ import java.util.Map;
 public class EntityUtil {
     public static void replaceFiles(String module, String name) throws IOException {
         name = StringUtils.toUpperCamelCase(name);
-        String currentDirectoryLocation = "../" + module + "/src/main/java/com/project/" + module + "/content/" + StringUtils.toLowerCamelCase(name);
+        String currentDirectoryLocation = "./" + module + "/src/main/java/com/project/" + module + "/content/" + StringUtils.toLowerCamelCase(name);
         List<String> fileList = new ArrayList<>();
 
         // Adapter
@@ -59,7 +59,7 @@ public class EntityUtil {
         name = StringUtils.toLowerCamelCase(name);
         String upperName = StringUtils.toUpperCamelCase(name);
         LinkedHashMap<String, String> folderMap = new LinkedHashMap<>();
-        String entityPath = "../" + module + "/src/main/java/com/project/" + module + "/content/" + name;
+        String entityPath = "./" + module + "/src/main/java/com/project/" + module + "/content/" + name;
 
         // Adapter in
         String routePath = "/adapter/in/rest/";
@@ -93,7 +93,7 @@ public class EntityUtil {
 
     public static void cloneContent(String module, String name) throws IOException {
         module = StringUtils.toLowerCamelCase(module);
-        String sourceDirectoryLocation = "../" + module + "/src/main/java/com/project/" + module + "/content/template";
+        String sourceDirectoryLocation = "./" + module + "/src/main/java/com/project/" + module + "/content/template";
         String destinationDirectoryLocation = "../" + module + "/src/main/java/com/project/" + module + "/content/" + StringUtils.toLowerCamelCase(name);
         File sourceDirectory = new File(sourceDirectoryLocation);
         File destinationDirectory = new File(destinationDirectoryLocation);
@@ -112,7 +112,7 @@ public class EntityUtil {
 
     private static List<File> getTemplateFiles(String module, String entityName) {
         List<File> files = new ArrayList<>();
-        String routePath = "../" + module + "/src/main/java/com/project/" + module + "/content/" + entityName;
+        String routePath = "./" + module + "/src/main/java/com/project/" + module + "/content/" + entityName;
         files.add(new File(routePath + "/adapter/in/rest/dtos/" + entityName + "Dto.java"));
         files.add(new File(routePath + "/adapter/out/persistence/entity/" + entityName + "Entity.java"));
         files.add(new File(routePath + "/domain/models/" + entityName + ".java"));

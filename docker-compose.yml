@@ -5,7 +5,7 @@ services:
     image: lowcode
     build:
       context: ""
-      dockerfile: ./Dockerfile
+      dockerfile: Dockerfile
     expose:
       - 8086
     ports:

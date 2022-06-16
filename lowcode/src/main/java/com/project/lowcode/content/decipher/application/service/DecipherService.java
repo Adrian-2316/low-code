@@ -57,6 +57,6 @@ public class DecipherService implements DecipherPort {
      * @throws IOException - IOException
      */
     private void buildFields(Decipher decipher) throws IOException {
-        EntityUtil.addConstructorLines(decipher);
+        EntityUtil.addClassLines(decipher);
     }
 }

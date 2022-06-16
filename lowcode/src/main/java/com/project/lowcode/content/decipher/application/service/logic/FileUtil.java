@@ -42,7 +42,7 @@ public class FileUtil {
      * @param files - List of files to be modified
      * @throws IOException - IOException
      */
-    public static void removeConstructorLines(List<File> files) throws IOException {
+    public static void removeClassLines(List<File> files) throws IOException {
         for (File file : files) {
             List<String> lines = FileUtils.readLines(file, "UTF-8");
             if (lines.contains(GENERATION_IMPORT_CODE_START)) {
@@ -67,7 +67,7 @@ public class FileUtil {
      * @param decipher - Decipher entity
      * @throws IOException - IOException
      */
-    public static void addConstructorLines(Entity entity, Decipher decipher, List<File> files) throws IOException {
+    public static void addClassLines(Entity entity, Decipher decipher, List<File> files) throws IOException {
         for (File file : files) {
             List<String> lines = FileUtils.readLines(file, "UTF-8");
             if (!lines.contains(GENERATION_CODE_SEGMENT_START) || !lines.contains(GENERATION_IMPORT_CODE_START))
@@ -82,9 +82,7 @@ public class FileUtil {
     }
 
     private static void addImports(Entity entity, Decipher decipher, File file, List<String> lines, int index) {
-        for (Field field : entity.getFields()) {
-            lines.add(index++, BuilderUtil.buildFieldImports(field));
-        }
+        lines.add(index++, BuilderUtil.buildFieldImports(entity.getFields()));
         for (Relations relation : decipher.getBackend().getRelations()) {
             lines.add(index++, BuilderUtil.buildRelationImports(relation, decipher, file, entity));
         }

@@ -6,8 +6,10 @@ import com.project.lowcode.content.decipher.domain.models.backend.Field;
 import com.project.lowcode.content.decipher.domain.models.backend.Relations;
 import com.project.lowcode.shared.RelationType;
 import com.project.lowcode.shared.StringUtils;
+import com.project.lowcode.shared.Type;
 
 import java.io.File;
+import java.util.List;
 
 public class BuilderUtil {
 
@@ -79,14 +81,10 @@ public class BuilderUtil {
         String orphanRemoval = relation.getOrphanRemoval() ? ", orphanRemoval = true" : "";
         String optional = !relation.getOptional() ? ", optional = false" : "";
         return switch (relation.getRelationType()) {
-            case OneToOne ->
-                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, optional));
-            case OneToMany ->
-                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, ""));
-            case ManyToOne ->
-                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, optional, "", ""));
-            case ManyToMany ->
-                    StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, mappedBy, "", ""));
+            case OneToOne -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, optional));
+            case OneToMany -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, mappedBy, fetchType, cascadeType, orphanRemoval, ""));
+            case ManyToOne -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, optional, "", ""));
+            case ManyToMany -> StringUtils.removeBadFormattingChars(String.format(relationBuilder, fetchType, cascadeType, mappedBy, "", ""));
         };
 
     }
@@ -118,19 +116,83 @@ public class BuilderUtil {
         return String.format(joinColumn, name, referencedColumnName, columnDefinition, insertable, updatable, table, nullable);
     }
 
-    public static String buildFieldImports(Field field) {
-        return "\timport java.util." + field.getType() + ";\n";
+
+    /**
+     * Method used to build the import strategy for the variables.
+     *
+     * @param fields - List of fields to check their type.
+     * @return String - Text to include in the file.
+     */
+    public static String buildFieldImports(List<Field> fields) {
+        List<Type> types = fields.stream().map(Field::getType).toList();
+        String line = "";
+        if (checkJavaUtilImports(types)) {
+            line += "\timport java.util.*;\n";
+        }
+        if (types.contains(Type.BigInteger) || types.contains(Type.BigDecimal)) {
+            line += "\timport java.math.*;\n";
+        }
+        if (types.contains(Type.Time)) {
+            line += "\timport java.sql.Time;\n";
+        }
+        if (types.contains(Type.DateTime)) {
+            line += "\timport com.google.api.client.util.DateTime;\n";
+        }
+
+        return line;
+    }
+
+    /**
+     * Method used to check if the type list include a java.util type.
+     *
+     * @param types - List of types to check.
+     * @return boolean - Return true if there is a java.util type included.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html">Java Util</a>
+     */
+    private static boolean checkJavaUtilImports(List<Type> types) {
+        return types.contains(Type.Date) ||
+                types.contains(Type.List) ||
+                types.contains(Type.Set) ||
+                types.contains(Type.Map) ||
+                types.contains(Type.HashMap) ||
+                types.contains(Type.HashSet) ||
+                types.contains(Type.ArrayList) ||
+                types.contains(Type.LinkedList) ||
+                types.contains(Type.LinkedHashMap) ||
+                types.contains(Type.LinkedHashSet) ||
+                types.contains(Type.TreeMap) ||
+                types.contains(Type.TreeSet) ||
+                types.contains(Type.Stack) ||
+                types.contains(Type.Queue) ||
+                types.contains(Type.Deque) ||
+                types.contains(Type.PriorityQueue);
     }
 
 
-    public static String buildRelationImports(Relations relation, Decipher decipher, File file, Entity entity) {
-        /*if (file.getName().endsWith("Entity.java")) {
-            String imports = "\timport com.project." + decipher.getBackend().getName() + ".content." + decipher.getBackend().getEntity() + "." + StringUtils.toUpperCamelCase(entity.getName()) + "Entity;\n";
-        } else if (file.getName().endsWith("Dto.java")) {
-            String imports = "\timport com.project." + decipher.getBackend().getName() + ".content." + decipher.getBackend().getEntity() + "." + StringUtils.toUpperCamelCase(entity.getName()) + "Dto;\n";
-        } else {
-            String imports = "\timport com.project." + decipher.getBackend().getName() + ".content." + decipher.getBackend().getEntity() + "." + StringUtils.toUpperCamelCase(entity.getName()) + ";\n";
-        }*/
-        return "";
+    /**
+     * Method used to build relation imports.
+     *
+     * @param relations - Existing relations.
+     * @param decipher  - Decipher entity.
+     * @param file      - File to edit.
+     * @param entity    - Entity to edit.
+     * @return String - Line to write.
+     */
+    public static String buildRelationImports(Relations relations, Decipher decipher, File file, Entity entity) {
+
+        String relationTarget = relations.getFirstEntity();
+        String relationFrom = relations.getFirstEntity();
+        if (relations.getFirstEntity().equals(entity.getName())) {
+            if (relations.getSecondEntity().equals(entity.getName())) return "";
+            relationTarget = relations.getSecondEntity();
+        }
+        if (file.getName().endsWith("Entity.java")) {
+            return "import com.project." + decipher.getBackend().getName() + ".content." + relationFrom + ".adapter.out.persistence.entity" + StringUtils.toUpperCamelCase(relationTarget) + "Entity;\n";
+        }
+        if (file.getName().endsWith("Dto.java")) {
+            return "import com.project." + decipher.getBackend().getName() + ".content." + relationFrom + ".adapter.in.rest.dtos." + StringUtils.toUpperCamelCase(relationTarget) + "Dto;\n";
+        }
+        return "import com.project." + decipher.getBackend().getName() + ".content." + relationFrom + ".domain.models." + StringUtils.toUpperCamelCase(relationTarget) + ";\n";
+
     }
 }

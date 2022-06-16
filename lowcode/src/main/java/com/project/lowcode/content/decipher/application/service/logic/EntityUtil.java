@@ -102,11 +102,11 @@ public class EntityUtil {
         }
     }
 
-    public static void addConstructorLines(Decipher decipher) throws IOException {
+    public static void addClassLines(Decipher decipher) throws IOException {
         for (Entity entity : decipher.getBackend().getEntity()) {
             List<File> files = getTemplateFiles(StringUtils.toLowerCamelCase(decipher.getBackend().getName()), StringUtils.toUpperCamelCase(entity.getName()));
-            FileUtil.removeConstructorLines(files);
-            FileUtil.addConstructorLines(entity, decipher, files);
+            FileUtil.removeClassLines(files);
+            FileUtil.addClassLines(entity, decipher, files);
         }
     }
 

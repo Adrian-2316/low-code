@@ -16,7 +16,7 @@ public class BuilderUtil {
     /**
      * Method used to build relation types.
      *
-     * @param relation - Relation to be build.
+     * @param relation - Relation to build.
      * @return String - String to be added as a relation type (e.g. Set<Entity>, Entity...)
      */
     public static String buildRelationType(Relations relation, String fieldEntity) {
@@ -94,6 +94,8 @@ public class BuilderUtil {
     }
 
     /**
+     * Method used to build Jpa Join annotation '@JoinColumn(...)'.
+     *
      * @param relation - Relation to be build.
      * @return (String) joinColumn - It returns the JoinColumn text annotation for the relation.
      * @see <a href="https://docs.oracle.com/javaee/6/api/javax/persistence/JoinColumn.html">JoinColumn</a>

@@ -16,6 +16,14 @@ import java.io.IOException;
 public class DecipherService implements DecipherPort {
     private JsonRepositoryPort jsonRepositoryPort;
 
+    /**
+     * Main implementation of decipher service.
+     *
+     * @param id - ID from the json to decipher.
+     * @throws IOException            - if json file is not found.
+     * @throws InterruptedException   - if thread is interrupted.
+     * @throws IllegalAccessException - if module is not found.
+     */
     @Override
     public void decipher(String id) throws IOException, InterruptedException, IllegalAccessException {
         Decipher decipher = jsonRepositoryPort.get(id);
@@ -25,10 +33,10 @@ public class DecipherService implements DecipherPort {
     }
 
     /**
-     * Main build module method
+     * Main build module method.
      *
-     * @param decipher - Decipher entity
-     * @throws IOException - IOException
+     * @param decipher - Decipher entity.
+     * @throws IOException - If the file cannot be read or written.
      */
     private void buildModule(Decipher decipher) throws IOException {
         ModuleUtil.cloneModule(decipher.getBackend().getName());
@@ -37,10 +45,10 @@ public class DecipherService implements DecipherPort {
     }
 
     /**
-     * Main build entities method
+     * Main build entities method.
      *
-     * @param decipher - Decipher entity
-     * @throws IOException - IOException
+     * @param decipher - Decipher entity.
+     * @throws IOException - If the file cannot be read or written.
      */
     private void buildEntities(Decipher decipher) throws IOException {
         for (Entity entity : decipher.getBackend().getEntity()) {
@@ -51,10 +59,10 @@ public class DecipherService implements DecipherPort {
     }
 
     /**
-     * Main build fields method
+     * Main build fields method.
      *
-     * @param decipher - Decipher entity
-     * @throws IOException - IOException
+     * @param decipher - Decipher entity.
+     * @throws IOException - If the file cannot be read or written.
      */
     private void buildFields(Decipher decipher) throws IOException {
         EntityUtil.addClassLines(decipher);

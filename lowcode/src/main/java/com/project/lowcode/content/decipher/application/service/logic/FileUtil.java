@@ -39,8 +39,8 @@ public class FileUtil {
     /**
      * Method to clean all fields in classes.
      *
-     * @param files - List of files to be modified
-     * @throws IOException - IOException
+     * @param files - List of files to be modified.
+     * @throws IOException - If the file cannot be read or written.
      */
     public static void removeClassLines(List<File> files) throws IOException {
         for (File file : files) {
@@ -62,10 +62,10 @@ public class FileUtil {
     /**
      * Method to add all fields in classes.
      *
-     * @param files    - List of files to be modified
-     * @param entity   - Entity
-     * @param decipher - Decipher entity
-     * @throws IOException - IOException
+     * @param files    - List of files to be modified.
+     * @param entity   - Entity.
+     * @param decipher - Decipher entity.
+     * @throws IOException - If the file cannot be read or written..
      */
     public static void addClassLines(Entity entity, Decipher decipher, List<File> files) throws IOException {
         for (File file : files) {
@@ -122,6 +122,15 @@ public class FileUtil {
         }
     }
 
+    /**
+     * Method to write all relations in a file.
+     *
+     * @param file      - File to be modified.
+     * @param relations - List of relations.
+     * @param index     - Line index.
+     * @param lines     - List of lines.
+     * @param entity    - Entity class.
+     */
     public static void addRelations(Entity entity, List<Relations> relations, File file, List<String> lines, int index) {
         for (Relations relation : relations) {
             if (relation.getFirstEntity().equals(entity.getName()))
@@ -131,6 +140,17 @@ public class FileUtil {
         }
     }
 
+    /**
+     * Method to write a relation in a file.
+     *
+     * @param file        - File to be modified.
+     * @param lines       - List of lines to be added.
+     * @param index       - Line index.
+     * @param relation    - Relation to be built.
+     * @param isOwnerSide - If the relation is owner side.
+     * @param fieldEntity - Entity name.
+     * @return - Index of the next line.
+     */
     private static int addRelation(File file, List<String> lines, int index, Relations relation, boolean isOwnerSide, String fieldEntity) {
         String relationType = BuilderUtil.buildRelationType(relation, fieldEntity);
         if (file.getName().endsWith("Entity.java")) {

@@ -11,6 +11,12 @@ import java.util.List;
 import java.util.Map;
 
 public class ModuleUtil {
+    /**
+     * Method to clone the template module into the new one and replace the directory name.
+     *
+     * @param name - The new name of the module.
+     * @throws IOException - If the file cannot be read or written.
+     */
     public static void cloneModule(String name)
             throws IOException {
         String sourceDirectoryLocation = "../module";
@@ -22,6 +28,12 @@ public class ModuleUtil {
         }
     }
 
+    /**
+     * Method to replace all files with the new module name.
+     *
+     * @param name - Name of the new module.
+     * @throws IOException - If the file cannot be read or written.
+     */
     public static void replaceFiles(String name) throws IOException {
         String currentDirectoryLocation = "../" + name;
         List<String> fileList = new ArrayList<>();
@@ -50,7 +62,7 @@ public class ModuleUtil {
      * MUST BE CALLED AFTER THE MODULE HAS BEEN CLONED.
      * MUST BE ORDERED FROM OUTSIDE TO INSIDE.
      *
-     * @param name the name of the module
+     * @param name Name of the module.
      */
     public static void replaceFolders(String name) {
         name = StringUtils.toLowerCamelCase(name);

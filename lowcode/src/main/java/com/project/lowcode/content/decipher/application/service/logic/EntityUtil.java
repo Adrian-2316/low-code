@@ -13,6 +13,13 @@ import java.util.List;
 import java.util.Map;
 
 public class EntityUtil {
+    /**
+     * Method used to replace all files names with the specified one.
+     *
+     * @param module - Module to be modified.
+     * @param name   - New name of the module.
+     * @throws IOException - If the file cannot be read or written.
+     */
     public static void replaceFiles(String module, String name) throws IOException {
         name = StringUtils.toUpperCamelCase(name);
         String currentDirectoryLocation = "../" + module + "/src/main/java/com/project/" + module + "/content/" + StringUtils.toLowerCamelCase(name);
@@ -51,8 +58,8 @@ public class EntityUtil {
      * MUST BE CALLED AFTER THE MODULE HAS BEEN CLONED.
      * MUST BE ORDERED FROM OUTSIDE TO INSIDE.
      *
-     * @param name   the name of the entity
-     * @param module the name of the module
+     * @param name   the name of the entity.
+     * @param module the name of the module.
      */
     public static void replaceFolders(String module, String name) {
         module = StringUtils.toLowerCamelCase(module);
@@ -91,6 +98,13 @@ public class EntityUtil {
     }
 
 
+    /**
+     * Method used to clone the template folder inside content and replace its name with the new one.
+     *
+     * @param module - Module to be modified.
+     * @param name   - New name of the module.
+     * @throws IOException - If the file cannot be read or written.
+     */
     public static void cloneContent(String module, String name) throws IOException {
         module = StringUtils.toLowerCamelCase(module);
         String sourceDirectoryLocation = "../" + module + "/src/main/java/com/project/" + module + "/content/template";
@@ -102,6 +116,12 @@ public class EntityUtil {
         }
     }
 
+    /**
+     * Method used to write lines to the copied files.
+     *
+     * @param decipher - Decipher entity.
+     * @throws IOException - If the file cannot be read or written.
+     */
     public static void addClassLines(Decipher decipher) throws IOException {
         for (Entity entity : decipher.getBackend().getEntity()) {
             List<File> files = getTemplateFiles(StringUtils.toLowerCamelCase(decipher.getBackend().getName()), StringUtils.toUpperCamelCase(entity.getName()));
@@ -110,6 +130,13 @@ public class EntityUtil {
         }
     }
 
+    /**
+     * Method used to get the template files.
+     *
+     * @param module     - Module name.
+     * @param entityName - Entity name.
+     * @return - List of files.
+     */
     private static List<File> getTemplateFiles(String module, String entityName) {
         List<File> files = new ArrayList<>();
         String routePath = "../" + module + "/src/main/java/com/project/" + module + "/content/" + entityName;

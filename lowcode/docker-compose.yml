@@ -1,0 +1,22 @@
+version: '2'
+services:
+  service:
+    container_name: lowcode
+    image: lowcode
+    build:
+      context: ""
+      dockerfile: ./Dockerfile
+    expose:
+      - 8086
+    ports:
+      - 8086:8086
+    networks:
+      - spring
+    restart: always
+    environment:
+      SERVICE_NAME: lowcode
+      PROFILE: ${PROFILE}
+
+networks:
+  spring:
+    external: true

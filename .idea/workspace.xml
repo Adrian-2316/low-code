@@ -4,63 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="478564a0-803e-4b6a-9b11-531fb9401739" name="Changes" comment="Decipher update.">
-      <change afterPath="$PROJECT_DIR$/company/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/CompanyApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/adapter/in/rest/FirstController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/adapter/in/rest/dtos/FirstDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/adapter/in/rest/dtos/FirstDtoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/adapter/out/persistence/FirstJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/adapter/out/persistence/FirstRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/adapter/out/persistence/entity/FirstEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/adapter/out/persistence/entity/FirstEntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/application/service/FirstService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/application/service/ports/in/FirstPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/application/service/ports/out/FirstRepositoryPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/first/domain/models/First.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/second/adapter/in/rest/SecondController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/second/adapter/in/rest/dtos/SecondDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/second/adapter/in/rest/dtos/SecondDtoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/second/adapter/out/persistence/SecondJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/second/adapter/out/persistence/SecondRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/second/adapter/out/persistence/entity/SecondEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/second/adapter/out/persistence/entity/SecondEntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/second/application/service/SecondService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/second/application/service/ports/in/SecondPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/second/application/service/ports/out/SecondRepositoryPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/second/domain/models/Second.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/adapter/in/rest/TemplateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/adapter/in/rest/dtos/TemplateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/adapter/in/rest/dtos/TemplateDtoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/adapter/out/persistence/TemplateJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/adapter/out/persistence/TemplateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/adapter/out/persistence/entity/TemplateEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/adapter/out/persistence/entity/TemplateEntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/application/service/TemplateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/application/service/ports/in/TemplatePort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/application/service/ports/out/TemplateRepositoryPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/content/template/domain/models/Template.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/log/AsyncLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/log/RequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/log/RequestLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/log/streams/BufferedServletInputStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/log/streams/TeeServletOutputStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/log/wrappers/BufferedRequestWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/log/wrappers/BufferedResponseWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/swagger/SwaggerConfigurerNotLocal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/swagger/SwaggerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/validations/annotations/EnumValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/java/com/project/company/validations/constraints/EnumConstraint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/src/test/java/com/project/module/TemplateApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/BuilderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/BuilderUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/project.iml" afterDir="false" />
+    <list default="true" id="478564a0-803e-4b6a-9b11-531fb9401739" name="Changes" comment="Decipher update.&#10;Comments added.">
+      <change afterPath="$PROJECT_DIR$/lowcode/src/test/java/com/project/lowcode/archunit/ArchUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/lowcode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/lowcode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lowcode/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lowcode/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +134,7 @@
       <command value="mvn clean compile" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.LowCode">
+  <component name="RunManager" selected="JUnit.ArchUnitTest">
     <configuration name="Decipher" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.project.module.TemplateApplication" />
       <module name="company" />
@@ -206,6 +153,21 @@
     <configuration name="Template" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.project.template.TemplateApplication" />
       <module name="module" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArchUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lowcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.lowcode.archunit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.lowcode.archunit" />
+      <option name="MAIN_CLASS_NAME" value="com.project.lowcode.archunit.ArchUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -264,9 +226,15 @@
       <item itemvalue="Application.LowCode" />
       <item itemvalue="Application.Decipher" />
       <item itemvalue="Application.Template" />
+      <item itemvalue="JUnit.ArchUnitTest" />
       <item itemvalue="Maven. [spring-boot:run]" />
       <item itemvalue="Maven.Heroku deploy" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ArchUnitTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -463,5 +431,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lowcode_project$LowCode.ic" NAME="LowCode Coverage Results" MODIFIED="1655420082628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

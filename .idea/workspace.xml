@@ -88,7 +88,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$M2_HOME$" />
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -103,29 +104,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="TODO_SCOPE" value="All Places" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lowcode" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/adri9/IdeaProjects/lowcode-project/company/pom.xml&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.project.lowcode.content.generator.adapter.in.rest" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\miguel.rodriguez\Documents\ProyectosWorkspace\low-code\lowcode" />
       <recent name="C:\Users\adri9\IdeaProjects\lowcode-project\template\src\main\java\com\project\template" />
       <recent name="C:\Users\adri9\IdeaProjects\lowcode-project\lowcode\src\main\java\com\project\lowcode" />
       <recent name="C:\Users\adri9\IdeaProjects\lowcode-project\lowcode\src\main\java\com\project\lowcode\content\decipher\application\service\ports" />
       <recent name="C:\Users\adri9\IdeaProjects\lowcode-project\lowcode\src\main\java\com\project\lowcode\content\decipher\adapter\out\persistence\entities" />
+      <recent name="C:\Users\adrian.moral\Bosonit\Staffit\lowcode\low-code\lowcode\src\main\java\com\project\lowcode\content\decipher\application\service\ports\out" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\miguel.rodriguez\Documents\ProyectosWorkspace\low-code\lowcode" />
-      <recent name="C:\Users\miguel.rodriguez\Documents\ProyectosWorkspace\low-code" />
       <recent name="C:\Users\adri9\IdeaProjects\lowcode-project\lowcode" />
       <recent name="C:\Users\adri9\IdeaProjects\lowcode-project" />
     </key>
@@ -146,7 +144,7 @@
       <command value="mvn clean compile" />
     </option>
   </component>
-  <component name="RunManager" selected="Docker.Lowcode">
+  <component name="RunManager" selected="JUnit.ArchUnitTest">
     <configuration name="Decipher" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.project.module.TemplateApplication" />
       <module name="company" />
@@ -165,6 +163,21 @@
     <configuration name="Template" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.project.template.TemplateApplication" />
       <module name="module" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArchUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lowcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.lowcode.archunit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.lowcode.archunit" />
+      <option name="MAIN_CLASS_NAME" value="com.project.lowcode.archunit.ArchUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -219,46 +232,19 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="LowCodeDebug" type="Remote">
-      <module name="lowcode" />
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="8086" />
-      <option name="AUTO_RESTART" value="false" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="8086" />
-        <option name="LOCAL" value="false" />
-      </RunnerSettings>
-      <method v="2">
-        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean package -pl lowcode -am " />
-        <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_lowcodeDebug" />
-      </method>
-    </configuration>
-    <configuration name="Lowcode" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="envFilePath" value="" />
-          <option name="commandLineOptions" value="--build" />
-          <option name="sourceFilePath" value="lowcode/docker-compose.yml" />
-          <option name="upExitCodeFromService" value="" />
-          <option name="upTimeout" value="" />
-        </settings>
-      </deployment>
-      <method v="2">
-        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean package -pl lowcode -am " />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.LowCode" />
       <item itemvalue="Application.Decipher" />
       <item itemvalue="Application.Template" />
-      <item itemvalue="Docker.Lowcode" />
+      <item itemvalue="JUnit.ArchUnitTest" />
       <item itemvalue="Maven. [spring-boot:run]" />
       <item itemvalue="Maven.Heroku deploy" />
-      <item itemvalue="Remote JVM Debug.LowCodeDebug" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ArchUnitTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -417,21 +403,7 @@
       <option name="project" value="LOCAL" />
       <updated>1654609639264</updated>
     </task>
-    <task id="LOCAL-00022" summary="Archivos de Docker">
-      <created>1655368191167</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1655368191167</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Archivos de Docker">
-      <created>1655375794627</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1655375794627</updated>
-    </task>
-    <option name="localTasksCounter" value="24" />
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +419,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -465,72 +436,13 @@
     <MESSAGE value="Decipher update." />
     <MESSAGE value="Decipher update.&#10;Builder update.&#10;Entity update." />
     <MESSAGE value="Pom update." />
-    <MESSAGE value="Archivos de Docker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Archivos de Docker" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/ModuleUtil.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/ModuleUtil.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/ModuleUtil.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/EntityUtil.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/EntityUtil.java</url>
-          <line>106</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/EntityUtil.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/EntityUtil.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/FileUtil.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/FileUtil.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/EntityUtil.java</url>
-          <line>114</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lowcode/src/main/java/com/project/lowcode/content/decipher/application/service/logic/EntityUtil.java</url>
-          <line>118</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="Pom update." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lowcode_project$LowCode.ic" NAME="LowCode Coverage Results" MODIFIED="1655420082628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
